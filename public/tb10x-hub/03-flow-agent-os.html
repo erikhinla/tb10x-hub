@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOW Agent OS | TransformBy10x</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Header */
+        header {
+            padding: 30px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero .subhead {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            opacity: 0.85;
+        }
+
+        .hero .btn {
+            padding: 18px 40px;
+            background: white;
+            color: #2563eb;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .hero .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* What It Is */
+        .what-it-is {
+            padding: 80px 0;
+        }
+
+        .what-it-is h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .what-it-is .intro {
+            font-size: 20px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .what-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .what-card {
+            padding: 30px;
+            background: #f9fafb;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .what-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #2563eb;
+        }
+
+        .what-card p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
+
+        .how-it-works h2 {
+            font-size: 42px;
+            margin-bottom: 60px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .how-step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .step-content h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .step-content p {
+            font-size: 17px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Who It's For */
+        .who-its-for {
+            padding: 80px 0;
+        }
+
+        .who-its-for h2 {
+            font-size: 42px;
+            margin-bottom: 60px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .need-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .need-section {
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .need-section.yes {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+        }
+
+        .need-section.no {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+        }
+
+        .need-section h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .need-section.yes h3 {
+            color: #059669;
+        }
+
+        .need-section.no h3 {
+            color: #dc2626;
+        }
+
+        .need-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .need-section li {
+            padding: 12px 0;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .need-section li:before {
+            content: "•";
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .need-section.yes li:before {
+            color: #10b981;
+        }
+
+        .need-section.no li:before {
+            color: #ef4444;
+        }
+
+        /* What You Get */
+        .what-you-get {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
+
+        .what-you-get h2 {
+            font-size: 42px;
+            margin-bottom: 60px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .feature-card h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 80px 0;
+        }
+
+        .pricing h2 {
+            font-size: 42px;
+            margin-bottom: 60px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .pricing-card {
+            padding: 50px 40px;
+            background: white;
+            border-radius: 12px;
+            border: 2px solid #e0e0e0;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: #2563eb;
+        }
+
+        .pricing-card.featured {
+            border-color: #2563eb;
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+        }
+
+        .pricing-card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .pricing-card .price {
+            font-size: 48px;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .pricing-card .price-note {
+            font-size: 16px;
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .pricing-card li {
+            padding: 10px 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .pricing-card li:before {
+            content: "✓";
+            color: #10b981;
+            margin-right: 10px;
+            font-weight: 700;
+        }
+
+        .pricing-card .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .pricing-card .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .pricing-card .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .pricing-card .btn-secondary {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+            background: white;
+        }
+
+        .pricing-card .btn-secondary:hover {
+            background: #eff6ff;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta .btn {
+            padding: 18px 40px;
+            background: white;
+            color: #2563eb;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: #999;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            .what-grid {
+                grid-template-columns: 1fr;
+            }
+            .how-step {
+                grid-template-columns: 1fr;
+            }
+            .need-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">TransformBy10x</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>FLOW Agent OS</h1>
+            <p class="subtitle">Governance-first orchestration for multi-agent AI systems</p>
+            <p class="subhead">Not a chatbot. Not a tool wrapper. An operating system for coordinated AI execution.</p>
+            <a href="#pricing" class="btn">Deploy FLOW</a>
+        </div>
+    </section>
+
+    <section class="what-it-is">
+        <div class="container">
+            <h2>What It Is</h2>
+            <p class="intro">FLOW is the execution runtime of the W.I.N. System. It orchestrates multiple AI agents, models, and providers into governed, auditable workflows.</p>
+            <div class="what-grid">
+                <div class="what-card">
+                    <h4>Not AI</h4>
+                    <p>FLOW doesn't run models. It routes work to the right model at the right time.</p>
+                </div>
+                <div class="what-card">
+                    <h4>Not Middleware</h4>
+                    <p>FLOW doesn't just pass data. It enforces policy before execution.</p>
+                </div>
+                <div class="what-card">
+                    <h4>An Operating System</h4>
+                    <p>FLOW coordinates agents like an OS coordinates processes. Govern, route, audit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            
+            <div class="how-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Declarative Workflows</h3>
+                    <p>Define workflows in .flow.yml files. Specify inputs, governance policies, execution steps, and outputs. FLOW handles the rest.</p>
+                </div>
+            </div>
+
+            <div class="how-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Governance Layer</h3>
+                    <p>Policies run before execution, not after. Risk assessment, approval gates, compliance checks all enforced at orchestration time.</p>
+                </div>
+            </div>
+
+            <div class="how-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Session-Aware Orchestration</h3>
+                    <p>Agents don't just get tasks, they get context. State persists across handoffs. No more "can you remind me what we're working on?"</p>
+                </div>
+            </div>
+
+            <div class="how-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Multi-Model, Multi-Provider</h3>
+                    <p>Route tasks based on capability and cost. GPT-4 for architecture, Gemini for visual tasks, Claude for writing. One system, many tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="who-its-for">
+        <div class="container">
+            <h2>Who It's For</h2>
+            <div class="need-grid">
+                <div class="need-section yes">
+                    <h3>You Need FLOW If:</h3>
+                    <ul>
+                        <li>You're coordinating 2+ AI agents manually</li>
+                        <li>Context gets lost between handoffs</li>
+                        <li>You need audit trails for compliance</li>
+                        <li>Model costs are unpredictable</li>
+                        <li>Agents duplicate work or conflict</li>
+                        <li>You're past "trying AI out" phase</li>
+                    </ul>
+                </div>
+                <div class="need-section no">
+                    <h3>You Don't Need FLOW If:</h3>
+                    <ul>
+                        <li>You're using a single AI chatbot</li>
+                        <li>No-code tools handle your workflows</li>
+                        <li>Manual coordination is working fine</li>
+                        <li>Governance/compliance don't apply</li>
+                        <li>You're still exploring AI use cases</li>
+                        <li>Scale isn't a concern yet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="what-you-get">
+        <div class="container">
+            <h2>What You Get</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>FLOW Runtime</h4>
+                    <p>The core orchestration engine. Runs locally or in your cloud.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Schema Language</h4>
+                    <p>.flow.yml format for defining workflows. Human-readable, version-controlled.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Agent Adapters</h4>
+                    <p>Pre-built connectors for OpenAI, Anthropic, Google, and custom agents.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Governance Dashboard</h4>
+                    <p>View audit trails, approve gated tasks, monitor costs.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Policy Engine</h4>
+                    <p>Define risk tiers, approval gates, compliance rules. Enforced before execution.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Deployment Toolkit</h4>
+                    <p>Docker images, Kubernetes configs, self-hosted guides.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Self-Hosted</h3>
+                    <div class="price">Free</div>
+                    <p class="price-note">Open-source core (Apache 2.0)</p>
+                    <ul>
+                        <li>FLOW Runtime</li>
+                        <li>Schema language</li>
+                        <li>Agent adapters</li>
+                        <li>Community support</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Deploy Locally</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Managed</h3>
+                    <div class="price">Usage</div>
+                    <p class="price-note">Coming Q2 2025</p>
+                    <ul>
+                        <li>Everything in Self-Hosted</li>
+                        <li>Hosted dashboard</li>
+                        <li>Managed infrastructure</li>
+                        <li>Usage-based pricing</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Join Waitlist</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <p class="price-note">Tailored deployment</p>
+                    <ul>
+                        <li>Everything in Managed</li>
+                        <li>On-prem or VPC deployment</li>
+                        <li>Custom SLA</li>
+                        <li>Priority support</li>
+                        <li>Training & onboarding</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Or Hire Us to Deploy It</h2>
+            <p>BizBuilders AI implements FLOW for teams that want systems, not DIY projects.</p>
+            <a href="#" class="btn">Talk to BizBuilders</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>TransformBy10x | FLOW Agent OS</p>
+        </div>
+    </footer>
+</body>
+</html>

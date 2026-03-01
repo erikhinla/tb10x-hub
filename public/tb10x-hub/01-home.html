@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransformBy10x | 10% → 10x via Context Architecture</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Header */
+        header {
+            padding: 30px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            color: #1a1a1a;
+        }
+
+        .hero .subhead {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+            background: white;
+        }
+
+        .btn-secondary:hover {
+            background: #eff6ff;
+        }
+
+        /* Thesis */
+        .thesis {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
+
+        .thesis h2 {
+            font-size: 42px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .thesis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .thesis-card {
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .thesis-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        .thesis-card p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* System Visual */
+        .system {
+            padding: 80px 0;
+        }
+
+        .system h2 {
+            font-size: 42px;
+            margin-bottom: 60px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .system-diagram {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            border-radius: 16px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .system-level {
+            padding: 30px;
+            margin-bottom: 20px;
+            background: white;
+            border-left: 4px solid #2563eb;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .system-level h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2563eb;
+        }
+
+        .system-level p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .system-children {
+            margin-left: 40px;
+            margin-top: 20px;
+            border-left: 2px dashed #cbd5e1;
+            padding-left: 20px;
+        }
+
+        /* Offerings */
+        .offerings {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
+
+        .offerings h2 {
+            font-size: 42px;
+            margin-bottom: 60px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .offerings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .offering-card {
+            padding: 50px 40px;
+            background: white;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .offering-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .offering-card h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .offering-card p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .offering-card .btn {
+            display: inline-block;
+        }
+
+        /* Proof */
+        .proof {
+            padding: 80px 0;
+        }
+
+        .proof h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .proof .intro {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .proof-card {
+            padding: 40px;
+            background: #f9fafb;
+            border-radius: 12px;
+        }
+
+        .proof-card h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        .proof-card p {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+        }
+
+        .footer-cta h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .footer-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .footer-cta .btn {
+            background: white;
+            color: #2563eb;
+        }
+
+        .footer-cta .btn:hover {
+            background: #f9fafb;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: #999;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero .subhead {
+                font-size: 18px;
+            }
+            .thesis h2, .system h2, .offerings h2, .proof h2 {
+                font-size: 32px;
+            }
+            .system-diagram {
+                padding: 30px;
+            }
+            .system-children {
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">TransformBy10x</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Most people operate at 10%<br>of what's possible.</h1>
+            <p class="subhead">You're about to fix that. TB10X is a framework for AI-native operations. Not hype. Not theory. Just systems that ship.</p>
+            <div class="cta-buttons">
+                <a href="#system" class="btn btn-primary">See How It Works</a>
+                <a href="#" class="btn btn-secondary">Start with FLOW</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="thesis">
+        <div class="container">
+            <h2>The Shift</h2>
+            <div class="thesis-grid">
+                <div class="thesis-card">
+                    <h3>The Problem</h3>
+                    <p>Chaos. Scattered tools. Manual coordination. Your team is drowning in Slack threads and context-switching hell.</p>
+                </div>
+                <div class="thesis-card">
+                    <h3>The Insight</h3>
+                    <p>AI doesn't just automate tasks. It collapses entire workflow layers. But only when orchestrated properly.</p>
+                </div>
+                <div class="thesis-card">
+                    <h3>The Framework</h3>
+                    <p>Context Architecture: the right information, to the right agent, at the right time. Intelligence emerges from structure, not compute.</p>
+                </div>
+                <div class="thesis-card">
+                    <h3>The Proof</h3>
+                    <p>FLOW Agent OS, BizBuilders AI, BizBot Marketing. Live systems shipping real outcomes. No vaporware.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="system" id="system">
+        <div class="container">
+            <h2>How TB10X Works</h2>
+            <div class="system-diagram">
+                <div class="system-level">
+                    <h4>TB10X (Movement)</h4>
+                    <p>The philosophy: 10% → 10x via context architecture</p>
+                </div>
+                <div class="system-children">
+                    <div class="system-level">
+                        <h4>W.I.N. System (Doctrine)</h4>
+                        <p>Workstream Intellect Nexus. The governance framework.</p>
+                    </div>
+                    <div class="system-children">
+                        <div class="system-level">
+                            <h4>FLOW Agent OS (Runtime)</h4>
+                            <p>The execution engine. Orchestrated, governed, auditable.</p>
+                        </div>
+                        <div class="system-children">
+                            <div class="system-level" style="border-left-color: #10b981;">
+                                <h4>BizBuilders AI</h4>
+                                <p>Infrastructure delivery: deploy FLOW, build systems</p>
+                            </div>
+                            <div class="system-level" style="border-left-color: #f59e0b;">
+                                <h4>BizBot Marketing</h4>
+                                <p>Applied automation: analytics, growth, lead gen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offerings">
+        <div class="container">
+            <h2>What You Get</h2>
+            <div class="offerings-grid">
+                <div class="offering-card">
+                    <h3>Learn: W.I.N. System</h3>
+                    <p>The doctrine. How to think about orchestrated AI systems. Philosophy before tooling.</p>
+                    <a href="#" class="btn btn-secondary">Read the Doctrine</a>
+                </div>
+                <div class="offering-card">
+                    <h3>Build: FLOW Agent OS</h3>
+                    <p>The runtime. Deploy governance-first orchestration. Open-source core, managed option coming Q2.</p>
+                    <a href="#" class="btn btn-primary">Deploy FLOW</a>
+                </div>
+                <div class="offering-card">
+                    <h3>Hire: Delivery Modules</h3>
+                    <p>BizBuilders (infra) + BizBot (marketing). We build it, you run it.</p>
+                    <a href="#" class="btn btn-secondary">See Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="proof">
+        <div class="container">
+            <h2>Proof, Not Promises</h2>
+            <p class="intro">Live projects built using the TB10X framework. Systems that actually ship.</p>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <h4>The Passenger Doesn't Speak</h4>
+                    <p>Audio thriller produced with AI-led workflows. Scripts final, production in progress.</p>
+                    <p><strong>Proof:</strong> AI-native creative production works at scale</p>
+                </div>
+                <div class="proof-card">
+                    <h4>Prompt & Circumstance</h4>
+                    <p>Erik's blog documenting the TB10X journey. Literary voice, no flattening.</p>
+                    <p><strong>Proof:</strong> The philosophy isn't theoretical</p>
+                </div>
+                <div class="proof-card">
+                    <h4>Eva Paradis Analytics</h4>
+                    <p>Live marketing stack: GA4 + Meta Pixel + Supabase dashboard. Built by BizBuilders, marketed by BizBot.</p>
+                    <p><strong>Proof:</strong> Systems ship real outcomes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-cta">
+        <div class="container">
+            <h2>Ready to Go from 10% to 10x?</h2>
+            <p>Start with a free assessment. See what's possible.</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>TransformBy10x | Built by Erik Howerbush</p>
+        </div>
+    </footer>
+</body>
+</html>
