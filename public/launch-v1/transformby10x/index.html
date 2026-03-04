@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TransformBy10X — Intelligence Emerges From Workflow, Not Tools</title>
+    <title>TransformBy10X — Intelligence isn't in the tools. It's in the architecture.</title>
     <meta name="description" content="You are not broken. You may be operating in Digital Fatigue.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,6 +70,7 @@
         .btn-primary {
             background: var(--moss);
             color: var(--white);
+            border: none;
         }
         .btn-primary:hover {
             background: #3d4b09;
@@ -127,6 +128,11 @@
             display: none;
         }
         .layer-content.active { display: block; }
+        .layer-outcome {
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--moss);
+        }
         .case-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -199,6 +205,7 @@
             box-shadow: 0 4px 24px rgba(47, 58, 7, 0.2);
             font-weight: 500;
             transition: all var(--transition);
+            text-decoration: none;
         }
         .aiva-btn:hover {
             transform: scale(1.05);
@@ -268,7 +275,7 @@
                             <span style="color: #C8A96A; font-size: 1.5rem;">+</span>
                         </div>
                         <div class="layer-content">
-                            <p class="body-text" style="margin-bottom: 1.5rem;">The framework behind everything. AI-native operating model for removing friction between intention and outcome.</p>
+                            <div class="layer-outcome">Outcome: Understand the system.</div>
                             <a href="#diagnostic" class="btn btn-primary">Create Context Clarity</a>
                         </div>
                     </div>
@@ -282,6 +289,7 @@
                             <span style="color: #C8A96A; font-size: 1.5rem;">+</span>
                         </div>
                         <div class="layer-content">
+                            <div class="layer-outcome">Outcome: Aligned systems.</div>
                             <p class="body-text" style="margin-bottom: 1.5rem;">AI-native workflow architecture that replaces scattered tools with structured operations.</p>
                             <a href="https://bizbuilders.ai" class="btn btn-primary">Explore Infrastructure</a>
                         </div>
@@ -296,6 +304,7 @@
                             <span style="color: #C8A96A; font-size: 1.5rem;">+</span>
                         </div>
                         <div class="layer-content">
+                            <div class="layer-outcome">Outcome: Consistent growth.</div>
                             <p class="body-text" style="margin-bottom: 1.5rem;">Marketing execution powered by AI agents and automation pipelines.</p>
                             <a href="https://bizbotmarketing.ai" class="btn btn-primary">Activate Marketing Engine</a>
                         </div>
@@ -309,14 +318,14 @@
                 <h2>This proves the philosophy works.</h2>
                 <div class="case-grid">
                     <div class="case-card">
-                        <div class="case-type">AI-Native Production</div>
+                        <div class="case-type">AI-Native Storytelling Pipeline</div>
                         <div class="case-title">The Passenger Doesn't Speak</div>
-                        <p class="body-text">AI-native storytelling pipeline. Creative production without traditional friction.</p>
+                        <p class="body-text">Creative production without traditional friction.</p>
                     </div>
                     <div class="case-card">
-                        <div class="case-type">Editorial Property</div>
+                        <div class="case-type">AI and Human Interaction Experiments</div>
                         <div class="case-title">Prompt & Circumstance</div>
-                        <p class="body-text">AI and human interaction experiments. Understanding how context shapes outcomes.</p>
+                        <p class="body-text">Understanding how context shapes outcomes.</p>
                     </div>
                 </div>
             </div>
@@ -346,7 +355,7 @@
                     </div>
                     <div class="form-group">
                         <label for="timeline">Urgency / Timeline</label>
-                        <input type="text" id="timeline" name="timeline" placeholder="e.g., Need help this quarter" required>
+                        <input type="text" id="timeline" name="timeline" placeholder="e.g., This quarter" required>
                     </div>
                     <input type="hidden" name="_subject" value="TB10X Digital Fatigue Diagnostic">
                     <input type="hidden" name="_cc" value="erik@bizbuilders.ai">
@@ -358,7 +367,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 TransformBy10X. Intelligence emerges from workflow, not tools.</p>
+            <p>&copy; 2026 TransformBy10X</p>
         </div>
     </footer>
 

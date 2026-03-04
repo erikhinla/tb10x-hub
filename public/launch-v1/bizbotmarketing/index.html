@@ -68,45 +68,25 @@
             cursor: pointer;
             background: var(--moss);
             color: var(--white);
+            border: none;
         }
         .btn:hover {
             background: #3d4b09;
             transform: translateY(-2px);
         }
         .hero { min-height: 80vh; display: flex; align-items: center; }
-        .functions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+        .outcomes-list {
+            list-style: none;
+            margin-top: 2rem;
         }
-        .function-card {
-            padding: 2rem;
-            border: 1px solid rgba(47, 58, 7, 0.15);
-            border-radius: 6px;
-        }
-        .function-title {
+        .outcomes-list li {
             font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--moss);
+            font-weight: 300;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(47, 58, 7, 0.1);
         }
-        .aiva-section {
-            background: linear-gradient(135deg, rgba(47, 58, 7, 0.03), rgba(200, 169, 106, 0.03));
-            padding: 5rem 2rem;
-            border-radius: 8px;
-        }
-        .aiva-badge {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background: var(--gold);
-            color: var(--white);
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 2rem;
+        .outcomes-list li:last-child {
+            border-bottom: none;
         }
         .assessment-form {
             max-width: 600px;
@@ -160,6 +140,7 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            text-decoration: none;
         }
         .aiva-btn:hover {
             transform: scale(1.05);
@@ -199,45 +180,27 @@
         <section>
             <div class="container">
                 <h2>The Problem</h2>
-                <p class="body-text">Marketing stalls because execution breaks. Ideas exist. Systems don't. Missed calls and slow follow-up leak revenue. The front line should not be the failure point.</p>
+                <p class="body-text">Marketing stalls because execution breaks. Ideas exist. Systems don't.</p>
             </div>
         </section>
 
         <section>
             <div class="container">
-                <h2>What BizBot Delivers</h2>
-                <p class="body-text" style="margin-bottom: 3rem;">BizBot organizes, optimizes, and mobilizes marketing operations.</p>
-                <div class="functions-grid">
-                    <div class="function-card">
-                        <div class="function-title">Consistent Publishing</div>
-                        <p class="body-text">Content pipelines that run automatically.</p>
-                    </div>
-                    <div class="function-card">
-                        <div class="function-title">Lead Capture</div>
-                        <p class="body-text">Never miss an inquiry. Respond in seconds, not hours.</p>
-                    </div>
-                    <div class="function-card">
-                        <div class="function-title">Growth Loops</div>
-                        <p class="body-text">Automated nurture sequences that convert.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-                <div class="aiva-section">
-                    <div class="aiva-badge">AIVA - AI Voice Agent</div>
-                    <h2>Meet AIVA</h2>
-                    <p class="body-text" style="margin-bottom: 2rem;">FLOW Agent OS provides AI voice and chat response plus qualification. AIVA handles intake, qualification, continuity, follow-up, and rebooking.</p>
-                    <p class="body-text">Your front line, always on. Never forgets. Always follows up.</p>
-                </div>
+                <h2>Solution</h2>
+                <p class="body-text" style="margin-bottom: 3rem;">Organize, optimize, and mobilize marketing operations.</p>
+                
+                <h2 style="font-size: 1.5rem; margin-top: 3rem;">Outcome</h2>
+                <ul class="outcomes-list">
+                    <li>Consistent publishing</li>
+                    <li>Lead capture</li>
+                    <li>Growth loops</li>
+                </ul>
             </div>
         </section>
 
         <section id="assessment">
             <div class="container">
-                <h2>Bottom-Line Leaking From Lead Loss?</h2>
+                <h2>Lead Loss Assessment</h2>
                 <p class="body-text">This assessment reveals where revenue is slipping through the cracks in your marketing execution.</p>
                 
                 <form class="assessment-form" action="https://formspree.io/f/xovonvnl" method="POST">
@@ -254,7 +217,7 @@
                         <input type="text" id="company" name="company" required>
                     </div>
                     <div class="form-group">
-                        <label for="monthly_leads">Approximate monthly leads/inquiries</label>
+                        <label for="monthly_leads">Monthly leads/inquiries</label>
                         <select id="monthly_leads" name="monthly_leads" required>
                             <option value="">Select range...</option>
                             <option value="<10">Less than 10</option>
@@ -265,11 +228,11 @@
                     </div>
                     <div class="form-group">
                         <label for="problem">Where is lead loss happening?</label>
-                        <textarea id="problem" name="problem" placeholder="e.g., slow response time, no follow-up system, missed calls..." required></textarea>
+                        <textarea id="problem" name="problem" placeholder="e.g., slow response, no follow-up, missed calls" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="timeline">Timeline</label>
-                        <input type="text" id="timeline" name="timeline" placeholder="e.g., Need solution this month" required>
+                        <input type="text" id="timeline" name="timeline" placeholder="e.g., This month" required>
                     </div>
                     <input type="hidden" name="_subject" value="BizBot Lead Loss Assessment">
                     <input type="hidden" name="_cc" value="erik@bizbuilders.ai">
@@ -281,7 +244,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 BizBot Marketing · A TransformBy10X company</p>
+            <p>&copy; 2026 BizBot Marketing</p>
         </div>
     </footer>
 

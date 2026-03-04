@@ -34,7 +34,7 @@
         }
         section { padding: 8rem 0; border-top: 1px solid rgba(47, 58, 7, 0.1); }
         section:first-of-type { border-top: none; }
-        h1, h2 {
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
             font-weight: 500;
             line-height: 1.2;
@@ -43,6 +43,7 @@
         }
         h1 { font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 1.5rem; }
         h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
         .subtitle {
             font-size: clamp(1.25rem, 2vw, 1.75rem);
             font-weight: 300;
@@ -68,54 +69,42 @@
             cursor: pointer;
             background: var(--moss);
             color: var(--white);
+            border: none;
         }
         .btn:hover {
             background: #3d4b09;
             transform: translateY(-2px);
         }
         .hero { min-height: 80vh; display: flex; align-items: center; }
-        .three-step {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+        .deliverables {
             margin-top: 4rem;
         }
-        .step {
-            text-align: center;
+        .deliverable-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(47, 58, 7, 0.1);
         }
-        .step-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: var(--gold);
-            margin-bottom: 1rem;
+        .deliverable-item:last-child {
+            border-bottom: none;
         }
-        .step-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--moss);
-        }
-        .outcomes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .outcome-card {
-            padding: 2rem;
-            border: 1px solid rgba(47, 58, 7, 0.15);
-            border-radius: 6px;
-            transition: all var(--transition);
-        }
-        .outcome-card:hover {
-            border-color: var(--moss);
-            box-shadow: 0 4px 24px rgba(47, 58, 7, 0.08);
-        }
-        .outcome-title {
+        .deliverable-title {
             font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
             color: var(--moss);
+            margin-bottom: 0.5rem;
+        }
+        .outcomes-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        .outcomes-list li {
+            font-size: 1.25rem;
+            font-weight: 300;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(47, 58, 7, 0.1);
+        }
+        .outcomes-list li:last-child {
+            border-bottom: none;
         }
         .assessment-form {
             max-width: 600px;
@@ -175,31 +164,27 @@
         <section>
             <div class="container">
                 <h2>The Problem</h2>
-                <p class="body-text">Companies adopt AI but build on fragmented or outdated systems. Automation attempts fail without context as the foundation. Disconnected tools create drag. Workflow without structure loses context.</p>
+                <p class="body-text">Companies adopt AI but build on fragmented or outdated systems. Automation attempts fail without context as the foundation.</p>
             </div>
         </section>
 
         <section>
             <div class="container">
-                <h2>What BizBuilders Delivers</h2>
-                <p class="body-text" style="margin-bottom: 3rem;">BizBuilders AI turns fragmented systems into a governed operating layer.</p>
-                <div class="three-step">
-                    <div class="step">
-                        <div class="step-number">01</div>
-                        <div class="step-title">Organize</div>
-                        <p class="body-text">Context Architecture. Map workflows, identify friction, establish structure.</p>
+                <h2>Solution</h2>
+                <p class="body-text" style="font-size: 1.5rem; margin-bottom: 3rem;">Context Architecture → Workflow Infrastructure → Agent Execution</p>
+                
+                <div class="deliverables">
+                    <div class="deliverable-item">
+                        <h3 class="deliverable-title">Context Architecture</h3>
                     </div>
-                    <div class="step">
-                        <div class="step-number">02</div>
-                        <div class="step-title">Optimize</div>
-                        <div class="step-title">Workflow Infrastructure</div>
-                        <p class="body-text">Build systems that connect. Replace chaos with orchestration.</p>
+                    <div class="deliverable-item">
+                        <h3 class="deliverable-title">Workflow Systems</h3>
                     </div>
-                    <div class="step">
-                        <div class="step-number">03</div>
-                        <div class="step-title">Mobilize</div>
-                        <div class="step-title">Agent Execution</div>
-                        <p class="body-text">Deploy AI agents within governed infrastructure. Scale execution.</p>
+                    <div class="deliverable-item">
+                        <h3 class="deliverable-title">Agent Infrastructure</h3>
+                    </div>
+                    <div class="deliverable-item">
+                        <h3 class="deliverable-title">AI Toolstack Orchestration</h3>
                     </div>
                 </div>
             </div>
@@ -207,28 +192,19 @@
 
         <section>
             <div class="container">
-                <h2>Outcomes</h2>
-                <div class="outcomes-grid">
-                    <div class="outcome-card">
-                        <div class="outcome-title">Clarity</div>
-                        <p class="body-text">Understand where work breaks and why.</p>
-                    </div>
-                    <div class="outcome-card">
-                        <div class="outcome-title">Direction</div>
-                        <p class="body-text">Know what to build and in what order.</p>
-                    </div>
-                    <div class="outcome-card">
-                        <div class="outcome-title">Momentum</div>
-                        <p class="body-text">Ship faster with aligned systems.</p>
-                    </div>
-                </div>
+                <h2>Outcome</h2>
+                <ul class="outcomes-list">
+                    <li>Clarity</li>
+                    <li>Direction</li>
+                    <li>Momentum</li>
+                </ul>
             </div>
         </section>
 
         <section id="assessment">
             <div class="container">
-                <h2>AI-Era Infrastructure Assessment</h2>
-                <p class="body-text">Before building, we need to understand your current state. This assessment reveals where infrastructure gaps are blocking AI leverage.</p>
+                <h2>Infrastructure Assessment</h2>
+                <p class="body-text">Before building, understand your current state. This assessment reveals where infrastructure gaps block AI leverage.</p>
                 
                 <form class="assessment-form" action="https://formspree.io/f/xovonvnl" method="POST">
                     <div class="form-group">
@@ -244,7 +220,7 @@
                         <input type="text" id="company" name="company" required>
                     </div>
                     <div class="form-group">
-                        <label for="problem">What infrastructure challenges are you facing?</label>
+                        <label for="problem">Infrastructure challenges</label>
                         <textarea id="problem" name="problem" required></textarea>
                     </div>
                     <div class="form-group">
@@ -261,7 +237,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 BizBuilders AI · A TransformBy10X company</p>
+            <p>&copy; 2026 BizBuilders AI</p>
         </div>
     </footer>
 </body>
