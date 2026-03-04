@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizBuilders AI — Build Systems That Work Together</title>
+    <meta name="description" content="AI tools alone do not create leverage. Architecture does.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --white: #FAFAFA;
+            --moss: #2F3A07;
+            --gold: #C8A96A;
+            --dark: #141414;
+            --transition: cubic-bezier(0.4, 0.0, 0.2, 1) 350ms;
+        }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--white);
+            color: var(--dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        header { padding: 2rem 0; border-bottom: 1px solid rgba(47, 58, 7, 0.1); }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--moss);
+        }
+        section { padding: 8rem 0; border-top: 1px solid rgba(47, 58, 7, 0.1); }
+        section:first-of-type { border-top: none; }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            color: var(--moss);
+        }
+        h1 { font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 1.5rem; }
+        h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; }
+        .subtitle {
+            font-size: clamp(1.25rem, 2vw, 1.75rem);
+            font-weight: 300;
+            opacity: 0.8;
+            max-width: 40em;
+            margin-bottom: 3rem;
+        }
+        .body-text {
+            font-size: 1.125rem;
+            font-weight: 300;
+            opacity: 0.75;
+            max-width: 36em;
+            line-height: 1.8;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all var(--transition);
+            cursor: pointer;
+            background: var(--moss);
+            color: var(--white);
+        }
+        .btn:hover {
+            background: #3d4b09;
+            transform: translateY(-2px);
+        }
+        .hero { min-height: 80vh; display: flex; align-items: center; }
+        .three-step {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        .step {
+            text-align: center;
+        }
+        .step-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--moss);
+        }
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .outcome-card {
+            padding: 2rem;
+            border: 1px solid rgba(47, 58, 7, 0.15);
+            border-radius: 6px;
+            transition: all var(--transition);
+        }
+        .outcome-card:hover {
+            border-color: var(--moss);
+            box-shadow: 0 4px 24px rgba(47, 58, 7, 0.08);
+        }
+        .outcome-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--moss);
+        }
+        .assessment-form {
+            max-width: 600px;
+            margin: 3rem 0;
+            padding: 3rem;
+            border: 1px solid rgba(47, 58, 7, 0.15);
+            border-radius: 6px;
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--moss);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            border: 1px solid rgba(47, 58, 7, 0.2);
+            border-radius: 4px;
+            transition: all var(--transition);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--moss);
+        }
+        textarea { min-height: 120px; resize: vertical; }
+        footer {
+            padding: 4rem 0;
+            border-top: 1px solid rgba(47, 58, 7, 0.1);
+            text-align: center;
+            opacity: 0.6;
+        }
+        @media (max-width: 768px) {
+            section { padding: 4rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">BizBuilders AI</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Build systems that work together.</h1>
+                <p class="subtitle">AI tools alone do not create leverage. Architecture does.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>The Problem</h2>
+                <p class="body-text">Companies adopt AI but build on fragmented or outdated systems. Automation attempts fail without context as the foundation. Disconnected tools create drag. Workflow without structure loses context.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>What BizBuilders Delivers</h2>
+                <p class="body-text" style="margin-bottom: 3rem;">BizBuilders AI turns fragmented systems into a governed operating layer.</p>
+                <div class="three-step">
+                    <div class="step">
+                        <div class="step-number">01</div>
+                        <div class="step-title">Organize</div>
+                        <p class="body-text">Context Architecture. Map workflows, identify friction, establish structure.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">02</div>
+                        <div class="step-title">Optimize</div>
+                        <div class="step-title">Workflow Infrastructure</div>
+                        <p class="body-text">Build systems that connect. Replace chaos with orchestration.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">03</div>
+                        <div class="step-title">Mobilize</div>
+                        <div class="step-title">Agent Execution</div>
+                        <p class="body-text">Deploy AI agents within governed infrastructure. Scale execution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Outcomes</h2>
+                <div class="outcomes-grid">
+                    <div class="outcome-card">
+                        <div class="outcome-title">Clarity</div>
+                        <p class="body-text">Understand where work breaks and why.</p>
+                    </div>
+                    <div class="outcome-card">
+                        <div class="outcome-title">Direction</div>
+                        <p class="body-text">Know what to build and in what order.</p>
+                    </div>
+                    <div class="outcome-card">
+                        <div class="outcome-title">Momentum</div>
+                        <p class="body-text">Ship faster with aligned systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assessment">
+            <div class="container">
+                <h2>AI-Era Infrastructure Assessment</h2>
+                <p class="body-text">Before building, we need to understand your current state. This assessment reveals where infrastructure gaps are blocking AI leverage.</p>
+                
+                <form class="assessment-form" action="https://formspree.io/f/xovonvnl" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="problem">What infrastructure challenges are you facing?</label>
+                        <textarea id="problem" name="problem" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline">Timeline</label>
+                        <input type="text" id="timeline" name="timeline" placeholder="e.g., Q2 2026" required>
+                    </div>
+                    <input type="hidden" name="_subject" value="BizBuilders Infrastructure Assessment">
+                    <input type="hidden" name="_cc" value="erik@bizbuilders.ai">
+                    <button type="submit" class="btn" style="width: 100%;">Establish Context Architecture</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 BizBuilders AI · A TransformBy10X company</p>
+        </div>
+    </footer>
+</body>
+</html>

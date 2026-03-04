@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransformBy10X — Intelligence Emerges From Workflow, Not Tools</title>
+    <meta name="description" content="You are not broken. You may be operating in Digital Fatigue.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --white: #FAFAFA;
+            --moss: #2F3A07;
+            --gold: #C8A96A;
+            --dark: #141414;
+            --transition: cubic-bezier(0.4, 0.0, 0.2, 1) 350ms;
+        }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--white);
+            color: var(--dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        header { padding: 2rem 0; border-bottom: 1px solid rgba(47, 58, 7, 0.1); }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--moss);
+        }
+        section { padding: 8rem 0; border-top: 1px solid rgba(47, 58, 7, 0.1); }
+        section:first-of-type { border-top: none; }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            color: var(--moss);
+        }
+        h1 { font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 1.5rem; }
+        h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; }
+        .subtitle {
+            font-size: clamp(1.25rem, 2vw, 1.75rem);
+            font-weight: 300;
+            opacity: 0.8;
+            max-width: 40em;
+            margin-bottom: 3rem;
+        }
+        .body-text {
+            font-size: 1.125rem;
+            font-weight: 300;
+            opacity: 0.75;
+            max-width: 36em;
+            line-height: 1.8;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all var(--transition);
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: var(--moss);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background: #3d4b09;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--moss);
+            border: 2px solid var(--moss);
+        }
+        .btn-secondary:hover {
+            background: var(--moss);
+            color: var(--white);
+        }
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        .hero { min-height: 90vh; display: flex; align-items: center; }
+        .system-stack { margin-top: 4rem; max-width: 800px; }
+        .system-layer {
+            border: 1px solid rgba(47, 58, 7, 0.15);
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all var(--transition);
+        }
+        .system-layer:hover {
+            border-color: var(--moss);
+            box-shadow: 0 4px 24px rgba(47, 58, 7, 0.08);
+        }
+        .layer-header {
+            padding: 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .layer-title {
+            font-size: 1.75rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--moss);
+        }
+        .layer-role {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        .layer-content {
+            padding: 0 2rem 2rem;
+            display: none;
+        }
+        .layer-content.active { display: block; }
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .case-card {
+            border: 1px solid rgba(47, 58, 7, 0.15);
+            border-radius: 6px;
+            padding: 2.5rem;
+            transition: all var(--transition);
+        }
+        .case-card:hover {
+            border-color: var(--moss);
+            box-shadow: 0 4px 24px rgba(47, 58, 7, 0.08);
+        }
+        .case-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--moss);
+        }
+        .case-type {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        .diagnostic-form {
+            max-width: 600px;
+            margin: 3rem 0;
+            padding: 3rem;
+            border: 1px solid rgba(47, 58, 7, 0.15);
+            border-radius: 6px;
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--moss);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            border: 1px solid rgba(47, 58, 7, 0.2);
+            border-radius: 4px;
+            transition: all var(--transition);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--moss);
+        }
+        textarea { min-height: 120px; resize: vertical; }
+        .aiva-launcher {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+        .aiva-btn {
+            background: var(--moss);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 24px rgba(47, 58, 7, 0.2);
+            font-weight: 500;
+            transition: all var(--transition);
+        }
+        .aiva-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 32px rgba(47, 58, 7, 0.3);
+        }
+        footer {
+            padding: 4rem 0;
+            border-top: 1px solid rgba(47, 58, 7, 0.1);
+            text-align: center;
+            opacity: 0.6;
+        }
+        @media (max-width: 768px) {
+            section { padding: 4rem 0; }
+            .cta-group { flex-direction: column; }
+            .btn { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">TransformBy10X</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>You are not broken.<br>You may be operating in Digital Fatigue.</h1>
+                <p class="subtitle">When systems fragment and silently overwhelm, momentum disappears. Lift the fog to restore clarity and momentum.</p>
+                <div class="cta-group">
+                    <a href="#diagnostic" class="btn btn-primary">Fight Digital Fatigue</a>
+                    <a href="#system" class="btn btn-secondary">Find out how</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Digital tools promise leverage.<br>Instead they create fatigue.</h2>
+                <p class="body-text">Files scattered. Ideas buried. Automations half-built. Tools disconnected. You're not lacking discipline. You're lacking aligned systems.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Intelligence isn't in the tools.<br>It's in the architecture.</h2>
+                <p class="body-text" style="margin-bottom: 2rem;">Momentum returns when context becomes clear. Three layers:</p>
+                <div style="font-size: 1.25rem; font-weight: 300; line-height: 2;">
+                    1. Context<br>
+                    2. Infrastructure<br>
+                    3. Execution
+                </div>
+            </div>
+        </section>
+
+        <section id="system">
+            <div class="container">
+                <h2>The System</h2>
+                <div class="system-stack">
+                    <div class="system-layer">
+                        <div class="layer-header" onclick="toggleLayer(this)">
+                            <div>
+                                <div class="layer-role">Clarity Layer</div>
+                                <div class="layer-title">TransformBy10X</div>
+                            </div>
+                            <span style="color: #C8A96A; font-size: 1.5rem;">+</span>
+                        </div>
+                        <div class="layer-content">
+                            <p class="body-text" style="margin-bottom: 1.5rem;">The framework behind everything. AI-native operating model for removing friction between intention and outcome.</p>
+                            <a href="#diagnostic" class="btn btn-primary">Create Context Clarity</a>
+                        </div>
+                    </div>
+
+                    <div class="system-layer">
+                        <div class="layer-header" onclick="toggleLayer(this)">
+                            <div>
+                                <div class="layer-role">Infrastructure Layer</div>
+                                <div class="layer-title">BizBuilders AI</div>
+                            </div>
+                            <span style="color: #C8A96A; font-size: 1.5rem;">+</span>
+                        </div>
+                        <div class="layer-content">
+                            <p class="body-text" style="margin-bottom: 1.5rem;">AI-native workflow architecture that replaces scattered tools with structured operations.</p>
+                            <a href="https://bizbuilders.ai" class="btn btn-primary">Explore Infrastructure</a>
+                        </div>
+                    </div>
+
+                    <div class="system-layer">
+                        <div class="layer-header" onclick="toggleLayer(this)">
+                            <div>
+                                <div class="layer-role">Execution Layer</div>
+                                <div class="layer-title">BizBot Marketing</div>
+                            </div>
+                            <span style="color: #C8A96A; font-size: 1.5rem;">+</span>
+                        </div>
+                        <div class="layer-content">
+                            <p class="body-text" style="margin-bottom: 1.5rem;">Marketing execution powered by AI agents and automation pipelines.</p>
+                            <a href="https://bizbotmarketing.ai" class="btn btn-primary">Activate Marketing Engine</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>This proves the philosophy works.</h2>
+                <div class="case-grid">
+                    <div class="case-card">
+                        <div class="case-type">AI-Native Production</div>
+                        <div class="case-title">The Passenger Doesn't Speak</div>
+                        <p class="body-text">AI-native storytelling pipeline. Creative production without traditional friction.</p>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-type">Editorial Property</div>
+                        <div class="case-title">Prompt & Circumstance</div>
+                        <p class="body-text">AI and human interaction experiments. Understanding how context shapes outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diagnostic">
+            <div class="container">
+                <h2>Start with clarity.</h2>
+                <p class="body-text">Before infrastructure or automation, context must be understood. The Context Clarity diagnostic reveals where digital friction is blocking momentum.</p>
+                
+                <form class="diagnostic-form" action="https://formspree.io/f/xovonvnl" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="problem">What's blocking your momentum?</label>
+                        <textarea id="problem" name="problem" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline">Urgency / Timeline</label>
+                        <input type="text" id="timeline" name="timeline" placeholder="e.g., Need help this quarter" required>
+                    </div>
+                    <input type="hidden" name="_subject" value="TB10X Digital Fatigue Diagnostic">
+                    <input type="hidden" name="_cc" value="erik@bizbuilders.ai">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Create Context Clarity</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TransformBy10X. Intelligence emerges from workflow, not tools.</p>
+        </div>
+    </footer>
+
+    <div class="aiva-launcher">
+        <a href="#diagnostic" class="btn aiva-btn">Talk to AIVA</a>
+    </div>
+
+    <script>
+        function toggleLayer(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('span');
+            document.querySelectorAll('.layer-content').forEach(el => {
+                if (el !== content) {
+                    el.classList.remove('active');
+                    el.previousElementSibling.querySelector('span').textContent = '+';
+                }
+            });
+            content.classList.toggle('active');
+            icon.textContent = content.classList.contains('active') ? '−' : '+';
+        }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>
