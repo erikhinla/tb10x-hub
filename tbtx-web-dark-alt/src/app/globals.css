@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cream: #FAF8F5;
+    --color-ink: #0D0D0D;
+    --color-gold: #C9A96E;
+    --color-mint: #A8D5BA;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-ink text-cream font-sans;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply backdrop-blur-[20px] border border-glass-border;
+    background: rgba(250, 248, 245, 0.85);
+  }
+
+  .glass-panel-dark {
+    @apply backdrop-blur-[20px] border border-glass-border;
+    background: rgba(13, 13, 13, 0.75);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, var(--color-ink) 0%, var(--color-gold) 100%);
+  }
+
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-20 xl:px-32;
+  }
+
+  .divider {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent;
+  }
+
+  .video-placeholder {
+    @apply relative w-full aspect-video bg-ink/5 rounded-lg overflow-hidden flex items-center justify-center;
+  }
+
+  .video-placeholder::after {
+    content: "Video coming soon";
+    @apply text-micro uppercase tracking-widest text-ash;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
