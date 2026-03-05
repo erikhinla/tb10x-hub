@@ -1,0 +1,390 @@
+version: "1.2.0"
+task_id: "launch_tbtx_ecosystem_atomic_v1_2_0"
+mode: "build"
+title: "Launch TransformBy10X Ecosystem With Architecture-First Messaging and Structured UI"
+priority: "critical"
+owner: "OpenClaw"
+routing:
+  orchestrator: "OpenClaw"
+  primary_worker: "Cursor"
+  secondary_workers:
+    - "Lovable"
+    - "Vercel"
+    - "Manus"
+policy:
+  atomic_output_required: true
+  no_breadcrumbs: true
+  no_incremental_delivery: true
+  no_scope_drift: true
+  no_placeholder_public_ui: true
+  no_dead_buttons: true
+  maintain_brand_hierarchy: true
+  preserve_locked_messaging: true
+source_of_truth:
+  lovable_project_id: "e6b3455d-e110-4f4e-a2b2-76e4aefb31b1"
+  lovable_project_url: "https://lovable.dev/projects/e6b3455d-e110-4f4e-a2b2-76e4aefb31b1"
+brand_architecture:
+  umbrella_brand:
+    name: "TransformBy10X"
+    role: "Worldview and doctrine for operating at more than 10% of capability"
+    core_problem_name: "Digital fatigue"
+    core_problem_statement: >
+      The problem is not AI adoption. The problem is capable people losing momentum
+      because their digital environment is fragmented (tools that don't talk, scattered files,
+      buried ideas, stalled decisions, automation chaos, marketing friction).
+    emotional_ladder:
+      - "Recognition: Oh, that's exactly what's happening."
+      - "Relief: So I'm not crazy."
+      - "Curiosity: There's a system for this?"
+      - "Clarity: I see how this works."
+      - "Action: I want to fix this."
+  business_arms:
+    - name: "BizBuilders AI"
+      role: "Infrastructure intelligence arm (Context Architecture to Workflow Infrastructure to Agent execution)"
+    - name: "BizBot Marketing"
+      role: "Execution arm (AI agents and automation pipelines powering consistent marketing and lead handling)"
+  doctrine:
+    win:
+      acronym: "W.I.N."
+      expansion: "Workstream Intellect Nexus"
+      role: "Identity-level doctrine explaining why orchestrated intelligence beats tool chaos"
+      headline: "Silicon Valley is lying to you."
+      subhead: >
+        Intelligence isn't in the tools. It's in the architecture. Governed infrastructure,
+        recursive workflows, risk-tier routing, and agentic orchestration.
+    flow:
+      acronym: "F.L.O.W."
+      expansion: "Frictionless Leveraged Orchestrated Workflows"
+      role: "Execution method that turns doctrine into running systems"
+    flow_agent_os:
+      name: "FLOW Agent OS"
+      role: "TB10X execution runtime and Agent OS"
+      description: >
+        Production-grade multi-agent operating system that implements W.I.N. and F.L.O.W.:
+        three agents, risk-tier routing, filesystem task queues, and governed execution boundaries.
+  persistent_agent:
+    name: "AIVA"
+    role: "AI voice and chat concierge for intake, qualification, continuity, follow-up, and rebooking"
+  media_properties:
+    - name: "Prompt & Circumstance"
+      role: "Editorial/media property on human-AI interaction and context"
+    - name: "The Passenger Doesn't Speak"
+      role: "Narrative/media property and AI-native storytelling pipeline"
+domains:
+  - domain: "transformby10x.ai"
+    canonical_brand: "TransformBy10X"
+    required_status: "live"
+  - domain: "bizbuilders.ai"
+    canonical_brand: "BizBuilders AI"
+    required_status: "live"
+  - domain: "bizbotmarketing.ai"
+    canonical_brand: "BizBot Marketing"
+    required_status: "live"
+launch_requirements:
+  deployment:
+    goal: "Public production launch today"
+    acceptable_architecture:
+      - "Single codebase with hostname-based routing"
+      - "Separate deploys if faster and stable"
+    mandatory:
+      - "Working HTTPS on all domains"
+      - "Stable domain resolution"
+      - "Working mobile and desktop rendering"
+      - "No public placeholder pages"
+      - "No broken CTA paths"
+site_map:
+  transformby10x_ai:
+    domain: "transformby10x.ai"
+    purpose: "Umbrella hub and doctrine front door"
+    messaging_hierarchy_order:
+      - "Problem: Digital fatigue"
+      - "Philosophy: TransformBy10X worldview"
+      - "Doctrine: W.I.N."
+      - "Architecture + Agent OS: F.L.O.W. + FLOW Agent OS"
+      - "Arms: BizBuilders AI (infrastructure), BizBot Marketing (execution)"
+      - "Entry point: Context Clarity Diagnostic"
+    required_sections:
+      - "Hero"
+      - "The Problem (Digital fatigue)"
+      - "The Shift (Context to Architecture)"
+      - "The System (stack: TransformBy10X to BizBuilders AI to BizBot Marketing)"
+      - "Diagnostic (Context Clarity)"
+      - "Case Studies: The Passenger Doesn't Speak, Prompt & Circumstance"
+      - "Founder section for Erik Howerbush"
+      - "AIVA intake CTA"
+      - "Final conversion CTA"
+    hero_wireframe:
+      layout: "Cinematic, minimal, large type, no feature grid"
+      headline: "They're lying to you. Intelligence isn't in the tools, it's in the architecture."
+      subhead: >
+        When systems fragment, momentum disappears. TransformBy10X helps restore clarity
+        and forward motion.
+      primary_cta: "Create Context Clarity"
+      secondary_cta: "See How the System Works"
+    problem_section:
+      headline: "Digital tools promised leverage. Instead they created fatigue."
+      body_bullets:
+        - "Files scattered."
+        - "Ideas buried."
+        - "Automation half-built."
+        - "Tools disconnected."
+      reassurance: "You are not lacking discipline. You are lacking aligned systems."
+    shift_section:
+      headline: "Momentum returns when context becomes architecture."
+      body: "TransformBy10X is a system for restoring clarity and building AI-native operations."
+      layers:
+        - "Context (worldview and doctrine)"
+        - "Infrastructure (BizBuilders AI + FLOW Agent OS)"
+        - "Execution (BizBot Marketing + AIVA)"
+    system_section:
+      visual_type: "Vertical stack diagram, not cards, no SaaS grid"
+      stack:
+        - name: "TransformBy10X"
+          role: "Clarity layer"
+          outcome: "Understand the system."
+          cta: "Create Context Clarity"
+        - name: "BizBuilders AI"
+          role: "Infrastructure layer"
+          outcome: "Aligned systems."
+          body: "We design AI-native workflow architecture that replaces scattered tools with structured operations, powered by FLOW Agent OS."
+          cta: "Explore Infrastructure"
+        - name: "BizBot Marketing"
+          role: "Execution layer"
+          outcome: "Consistent growth."
+          body: "Marketing execution powered by AI agents and automation pipelines, with AIVA on the front line."
+          cta: "Activate Marketing Engine"
+    diagnostic_section:
+      headline: "Start with clarity."
+      body: >
+        Before infrastructure or automation, context must be understood. The Context Clarity
+        Diagnostic reveals where digital friction is blocking momentum.
+      cta: "Create Context Clarity"
+      widget_name: "Digital Fog Diagnostic"
+    case_studies_section:
+      cards:
+        - name: "The Passenger Doesn't Speak"
+          role: "AI-native storytelling pipeline"
+          outcome: "Creative production without traditional friction."
+        - name: "Prompt & Circumstance"
+          role: "AI and human interaction experiments"
+          outcome: "Understanding how context shapes outcomes."
+    design_guardrails:
+      direction:
+        - "Cinematic"
+        - "Minimal"
+        - "High-contrast dark or neutral palette"
+        - "Large typography, calm spacing"
+        - "Architecture diagrams instead of feature grids"
+      avoid:
+        - "Startup gradients"
+        - "Busy dashboards"
+        - "SaaS feature tiles"
+  bizbuilders_ai:
+    domain: "bizbuilders.ai"
+    purpose: "Infrastructure intelligence and FLOW Agent OS landing page"
+    required_sections:
+      - "Hero"
+      - "Problem framing"
+      - "What BizBuilders builds"
+      - "FLOW Agent OS block"
+      - "Three-step system section"
+      - "Outcomes"
+      - "Infrastructure Assessment lead-gen block"
+      - "Final CTA"
+    hero_copy:
+      headline: "Build systems that work together."
+      subhead: "AI tools alone do not create leverage. Architecture does."
+      primary_cta: "Establish Context Architecture"
+    problem_copy:
+      statement: "Companies adopt AI but remain fragmented. Automation attempts fail because context is missing."
+    what_we_build:
+      bullets:
+        - "Context Architecture"
+        - "Workflow Systems"
+        - "Agent Infrastructure"
+        - "AI Toolstack Orchestration"
+    flow_agent_os_block:
+      headline: "FLOW Agent OS: The TB10X execution runtime."
+      body: >
+        FLOW Agent OS implements W.I.N. and F.L.O.W. in production: three agents, risk-tier routing,
+        filesystem task queues, and governed execution boundaries. This is the Agent OS that sits
+        underneath BizBuilders deployments.
+    outcomes:
+      bullets:
+        - "Clarity"
+        - "Direction"
+        - "Momentum"
+    assessment_widget:
+      name: "Infrastructure AI-Era Alignment"
+      cta: "Run Infrastructure Assessment"
+  bizbotmarketing_ai:
+    domain: "bizbotmarketing.ai"
+    purpose: "Front-line conversion and marketing execution page"
+    required_sections:
+      - "Hero"
+      - "What BizBot does"
+      - "Core functions"
+      - "AIVA section"
+      - "Lead Loss Assessment block"
+      - "Final CTA"
+    hero_copy:
+      headline: "Marketing that runs without constant effort."
+      subhead: "AI agents and automation turn scattered marketing tasks into a consistent growth engine."
+      primary_cta: "Activate Marketing Engine"
+    problem_copy:
+      statement: "Marketing stalls because execution breaks. Ideas exist. Systems don't."
+    solution_copy:
+      statement: "BizBot organizes, optimizes, and mobilizes marketing operations."
+    core_functions:
+      bullets:
+        - "Consistent publishing"
+        - "Lead capture"
+        - "Growth loops"
+    aiva_block:
+      required_message: >
+        AIVA handles intake, qualification, continuity, follow-up, and rebooking so the front line
+        is never the failure point.
+    lead_loss_widget:
+      name: "Lead Loss Assessment"
+      framing_line: "Bottom-Line Leaking From Lead Loss?"
+lead_gen:
+  required_live_capture_paths:
+    - brand: "TransformBy10X"
+      widget_name: "Digital Fog Diagnostic"
+      domain: "transformby10x.ai"
+    - brand: "BizBuilders AI"
+      widget_name: "Infrastructure AI-Era Alignment"
+      domain: "bizbuilders.ai"
+    - brand: "BizBot Marketing"
+      widget_name: "Lead Loss Assessment"
+      domain: "bizbotmarketing.ai"
+  submission_requirements:
+    mandatory_fields:
+      - "name"
+      - "email"
+      - "company"
+      - "short problem summary"
+      - "urgency or timeline"
+    mandatory_behavior:
+      - "No fake submit buttons"
+      - "No inert UI"
+      - "Submission must confirm receipt"
+      - "Submission must land in a retrievable destination"
+    acceptable_fallbacks:
+      - "Webhook"
+      - "Email delivery"
+      - "Database table"
+      - "CRM entry"
+AIVA:
+  required_presence:
+    - "Persistent visible conversion path across all three sites"
+    - "Sticky floating CTA or widget launcher"
+    - "Clear text explaining that AIVA handles intake, qualification, and continuity"
+  fallback_rule:
+    if_full_voice_flow_not_ready: "Use a working text intake fallback connected to the same lead capture destination"
+  forbidden:
+    - "Dead launcher"
+design_guardrails:
+  required_direction:
+    - "Luxury light or dark, but cinematic"
+    - "High-contrast"
+    - "Premium editorial"
+    - "Polished"
+  forbidden:
+    - "Generic SaaS layouts"
+    - "Feature grids as homepage hero"
+media_properties:
+  prompt_and_circumstance:
+    treat_as_separate_from_service_brands: true
+    required_outputs:
+      - "YouTube banner"
+      - "Profile image"
+      - "Substack header"
+      - "Short channel bio"
+      - "One launch post copy"
+      - "One visual thumbnail or cover treatment if needed"
+    positioning:
+      - "Separate editorial/media channel"
+      - "Sharp"
+      - "Intelligent"
+      - "Signal-driven"
+    publishing_rule:
+      if_full_site_not_fastest: "Publish as branded channel assets plus dedicated project section under TransformBy10X"
+  the_passenger_doesnt_speak:
+    treat_as_separate_from_service_brands: true
+    required_outputs:
+      - "YouTube banner"
+      - "Profile image"
+      - "Substack header"
+      - "Short project bio"
+      - "One launch post copy"
+      - "One visual thumbnail or cover treatment if needed"
+    positioning:
+      - "Separate narrative property"
+      - "Tense"
+      - "Restrained"
+      - "Cinematic"
+    publishing_rule:
+      if_full_site_not_fastest: "Publish as branded channel assets plus dedicated project section under TransformBy10X"
+implementation_sequence:
+  - "Finalize locked page copy and section structure per this file"
+  - "Ensure transformby10x.ai uses the cinematic homepage wireframe (no feature grid)"
+  - "Wire working lead capture for all three domains"
+  - "Connect or confirm AIVA launcher path"
+  - "Deploy production builds"
+  - "Attach domains and verify routing"
+  - "Verify HTTPS and SSL"
+  - "Verify mobile and desktop rendering"
+  - "Verify form submission flow on each site"
+  - "Verify navigation and CTA paths"
+  - "Produce Prompt & Circumstance asset pack and launch copy"
+  - "Produce The Passenger Doesn't Speak asset pack and launch copy"
+  - "Save all outputs to source-of-truth location"
+  - "Return final launch report"
+save_requirements:
+  centralize_outputs: true
+  must_save:
+    - "Deployed codebase"
+    - "Final brand copy"
+    - "Media assets"
+    - "Launch copy"
+    - "Widget endpoint configuration"
+    - "Environment variable notes"
+    - "Asset filenames"
+    - "Storage path manifest"
+  forbid_scattered_temp_outputs: true
+validation:
+  done_condition:
+    - "transformby10x.ai is live"
+    - "bizbuilders.ai is live"
+    - "bizbotmarketing.ai is live"
+    - "Each site has a working lead-gen capture path"
+    - "W.I.N. and F.L.O.W. Agent OS are clearly articulated in public messaging"
+    - "BizBuilders AI and BizBot Marketing clearly roll up under TransformBy10X"
+    - "Prompt & Circumstance has finalized launch assets and copy"
+    - "The Passenger Doesn't Speak has finalized launch assets and copy"
+    - "All outputs are saved in the active source-of-truth location"
+return_format:
+  required:
+    - "Live domain status for each site"
+    - "Live URL for each site"
+    - "Lead-gen status for each site"
+    - "Where submissions are landing"
+    - "Asset pack status for Prompt & Circumstance"
+    - "Asset pack status for The Passenger Doesn't Speak"
+    - "Exact save path for all final outputs"
+    - "One blocker list only if an external dependency prevents completion"
+  forbidden:
+    - "Extra strategy docs"
+    - "Future-phase suggestions"
+    - "Optional enhancements"
+    - "Brainstorming"
+    - "Open-ended next-step lists"
+failure_handling:
+  if_blocked:
+    classify_as:
+      - "DNS / domain access blocker"
+      - "Vercel / deploy permission blocker"
+      - "Lead capture endpoint blocker"
+      - "Source asset access blocker"
+    return_only_true_external_blockers: true
