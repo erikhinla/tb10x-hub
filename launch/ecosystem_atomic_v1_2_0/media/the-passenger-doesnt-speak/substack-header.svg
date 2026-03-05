@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#100d0c"/>
+  <path d="M0 600 L1280 280" stroke="#3a3026" stroke-width="2"/>
+  <path d="M0 520 L1280 200" stroke="#3a3026" stroke-width="2"/>
+  <text x="70" y="320" fill="#c8a96a" font-size="74" font-family="Georgia, serif">The Passenger Doesn't Speak</text>
+  <text x="76" y="390" fill="#f2dfc3" font-size="34" font-family="Arial, sans-serif">An AI-native narrative project.</text>
+</svg>

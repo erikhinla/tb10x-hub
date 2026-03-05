@@ -3,188 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizBuilders AI — Build Systems That Work Together</title>
-    <meta name="description" content="AI tools alone do not create leverage. Architecture does.">
+    <title>BizBuilders AI | Infrastructure Intelligence</title>
+    <meta name="description" content="Build systems that work together. AI tools alone do not create leverage. Architecture does.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --white: #FAFAFA;
-            --moss: #2F3A07;
-            --gold: #C8A96A;
-            --dark: #141414;
-            --transition: cubic-bezier(0.4, 0.0, 0.2, 1) 350ms;
+            --bg: #0b1014;
+            --panel: #101821;
+            --text: #ebf2f7;
+            --soft: #aebbc7;
+            --line: #243647;
+            --accent: #cba167;
+            --radius: 12px;
+            --max: 1080px;
         }
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: var(--white);
-            color: var(--dark);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+            background: radial-gradient(1200px 620px at 12% -15%, #1f2b38, var(--bg) 58%);
+            color: var(--text);
+            font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.66;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        header { padding: 2rem 0; border-bottom: 1px solid rgba(47, 58, 7, 0.1); }
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--moss);
-        }
-        section { padding: 8rem 0; border-top: 1px solid rgba(47, 58, 7, 0.1); }
-        section:first-of-type { border-top: none; }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 500;
-            line-height: 1.2;
-            letter-spacing: -0.03em;
-            color: var(--moss);
-        }
-        h1 { font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 1.5rem; }
-        h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; }
-        h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
-        .subtitle {
-            font-size: clamp(1.25rem, 2vw, 1.75rem);
-            font-weight: 300;
-            opacity: 0.8;
-            max-width: 40em;
-            margin-bottom: 3rem;
-        }
-        .body-text {
-            font-size: 1.125rem;
-            font-weight: 300;
-            opacity: 0.75;
-            max-width: 36em;
-            line-height: 1.8;
-        }
+        .container { max-width: var(--max); margin: 0 auto; padding: 0 1.4rem; }
+        header { border-bottom: 1px solid var(--line); background: rgba(11, 16, 20, 0.88); position: sticky; top: 0; z-index: 20; }
+        nav { min-height: 72px; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+        .logo { font-family: "Cormorant Garamond", serif; font-size: 2rem; }
+        .menu { display: flex; gap: 0.7rem; flex-wrap: wrap; }
         .btn {
-            display: inline-block;
-            padding: 1.25rem 3rem;
-            font-size: 1rem;
-            font-weight: 500;
+            border: 1px solid var(--accent);
+            color: var(--text);
             text-decoration: none;
-            border-radius: 4px;
-            transition: all var(--transition);
-            cursor: pointer;
-            background: var(--moss);
-            color: var(--white);
-            border: none;
-        }
-        .btn:hover {
-            background: #3d4b09;
-            transform: translateY(-2px);
-        }
-        .hero { min-height: 80vh; display: flex; align-items: center; }
-        .deliverables {
-            margin-top: 4rem;
-        }
-        .deliverable-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(47, 58, 7, 0.1);
-        }
-        .deliverable-item:last-child {
-            border-bottom: none;
-        }
-        .deliverable-title {
-            font-size: 1.25rem;
+            border-radius: 999px;
+            min-height: 46px;
+            padding: 0.65rem 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             font-weight: 600;
-            color: var(--moss);
-            margin-bottom: 0.5rem;
+            background: transparent;
+            cursor: pointer;
+            transition: 0.2s ease;
         }
-        .outcomes-list {
-            list-style: none;
+        .btn:hover { transform: translateY(-2px); }
+        .btn.primary { background: var(--accent); color: #1d1610; }
+        section { padding: 5rem 0; border-bottom: 1px solid rgba(36, 54, 71, 0.6); }
+        h1, h2, h3 { font-family: "Cormorant Garamond", serif; line-height: 1.08; }
+        h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); max-width: 14ch; }
+        h2 { font-size: clamp(1.9rem, 4.7vw, 3rem); max-width: 22ch; }
+        h3 { font-size: clamp(1.3rem, 2.8vw, 1.8rem); }
+        p { max-width: 68ch; color: var(--soft); }
+        .eyebrow { color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.76rem; margin-bottom: 1rem; }
+        .hero { min-height: 76vh; display: grid; align-items: center; }
+        .hero p { margin-top: 1.1rem; font-size: clamp(1.06rem, 2.2vw, 1.3rem); color: #d2dde6; }
+        .cta-group { display: flex; gap: 0.75rem; margin-top: 1.8rem; flex-wrap: wrap; }
+        .grid {
             margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.8rem;
         }
-        .outcomes-list li {
-            font-size: 1.25rem;
-            font-weight: 300;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(47, 58, 7, 0.1);
+        .panel {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--panel);
+            padding: 1rem;
         }
-        .outcomes-list li:last-child {
-            border-bottom: none;
+        .steps { margin-top: 2rem; display: grid; gap: 0.75rem; max-width: 760px; }
+        .step { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem; background: var(--panel); }
+        .kicker { color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.74rem; }
+        .outcomes { margin-top: 1.3rem; display: flex; gap: 0.7rem; flex-wrap: wrap; }
+        .tag { border: 1px solid var(--line); border-radius: 999px; padding: 0.5rem 0.8rem; background: var(--panel); }
+        .form-wrap {
+            margin-top: 2rem;
+            max-width: 760px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: #101822;
+            padding: 1.2rem;
         }
-        .assessment-form {
-            max-width: 600px;
-            margin: 3rem 0;
-            padding: 3rem;
-            border: 1px solid rgba(47, 58, 7, 0.15);
-            border-radius: 6px;
-        }
-        .form-group { margin-bottom: 1.5rem; }
-        label {
-            display: block;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: var(--moss);
-        }
+        .field { margin-bottom: 0.9rem; }
+        label { display: block; margin-bottom: 0.45rem; font-size: 0.86rem; color: #d5e0e8; }
         input, textarea {
             width: 100%;
-            padding: 1rem;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            border: 1px solid rgba(47, 58, 7, 0.2);
-            border-radius: 4px;
-            transition: all var(--transition);
+            border: 1px solid #30465a;
+            border-radius: 8px;
+            background: #0b1118;
+            color: var(--text);
+            padding: 0.75rem 0.82rem;
+            font: inherit;
         }
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--moss);
+        textarea { min-height: 125px; resize: vertical; }
+        .status { margin-top: 0.7rem; color: #8ddfba; display: none; font-size: 0.93rem; }
+        .aiva-dock {
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 40;
+            display: grid;
+            gap: 0.45rem;
+            justify-items: end;
         }
-        textarea { min-height: 120px; resize: vertical; }
-        footer {
-            padding: 4rem 0;
-            border-top: 1px solid rgba(47, 58, 7, 0.1);
-            text-align: center;
-            opacity: 0.6;
+        .aiva-dock small {
+            background: rgba(11, 16, 20, 0.96);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 0.5rem 0.65rem;
+            max-width: 280px;
+            color: #d2dee7;
         }
-        @media (max-width: 768px) {
-            section { padding: 4rem 0; }
+        footer { padding: 2rem 0 3rem; color: #a8b6c2; font-size: 0.92rem; }
+        @media (max-width: 780px) {
+            .menu { display: none; }
+            section { padding: 3.9rem 0; }
+            .aiva-dock small { display: none; }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">BizBuilders AI</div>
+            <nav>
+                <div class="logo">BizBuilders AI</div>
+                <div class="menu">
+                    <a class="btn" href="https://transformby10x.ai">TransformBy10X</a>
+                    <a class="btn" href="https://bizbotmarketing.ai">BizBot Marketing</a>
+                    <a class="btn primary" href="#assessment">Run Infrastructure Assessment</a>
+                </div>
+            </nav>
         </div>
     </header>
 
     <main>
         <section class="hero">
             <div class="container">
+                <div class="eyebrow">Infrastructure intelligence arm</div>
                 <h1>Build systems that work together.</h1>
-                <p class="subtitle">AI tools alone do not create leverage. Architecture does.</p>
+                <p>AI tools alone do not create leverage. Architecture does.</p>
+                <div class="cta-group">
+                    <a class="btn primary" href="#assessment">Establish Context Architecture</a>
+                    <a class="btn" href="#flow-os">See FLOW Agent OS</a>
+                </div>
             </div>
         </section>
 
         <section>
             <div class="container">
-                <h2>The Problem</h2>
-                <p class="body-text">Companies adopt AI but build on fragmented or outdated systems. Automation attempts fail without context as the foundation.</p>
+                <div class="eyebrow">Problem framing</div>
+                <h2>Companies adopt AI but remain fragmented.</h2>
+                <p>Automation attempts fail because context is missing.</p>
             </div>
         </section>
 
         <section>
             <div class="container">
-                <h2>Solution</h2>
-                <p class="body-text" style="font-size: 1.5rem; margin-bottom: 3rem;">Context Architecture → Workflow Infrastructure → Agent Execution</p>
-                
-                <div class="deliverables">
-                    <div class="deliverable-item">
-                        <h3 class="deliverable-title">Context Architecture</h3>
+                <div class="eyebrow">What BizBuilders builds</div>
+                <h2>Context architecture through governed infrastructure.</h2>
+                <div class="grid">
+                    <div class="panel"><h3>Context Architecture</h3></div>
+                    <div class="panel"><h3>Workflow Systems</h3></div>
+                    <div class="panel"><h3>Agent Infrastructure</h3></div>
+                    <div class="panel"><h3>AI Toolstack Orchestration</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="flow-os">
+            <div class="container">
+                <div class="eyebrow">FLOW Agent OS block</div>
+                <h2>FLOW Agent OS: The TB10X execution runtime.</h2>
+                <p>FLOW Agent OS implements W.I.N. and F.L.O.W. in production: three agents, risk-tier routing, filesystem task queues, and governed execution boundaries. This is the Agent OS that sits underneath BizBuilders deployments.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="eyebrow">Three-step system</div>
+                <h2>From context to execution integrity.</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="kicker">Step 1</div>
+                        <h3>Context Architecture</h3>
+                        <p>Map where digital fatigue is created and define canonical operating context.</p>
                     </div>
-                    <div class="deliverable-item">
-                        <h3 class="deliverable-title">Workflow Systems</h3>
+                    <div class="step">
+                        <div class="kicker">Step 2</div>
+                        <h3>Workflow Infrastructure</h3>
+                        <p>Design structured workflow systems that reduce fragmentation and routing risk.</p>
                     </div>
-                    <div class="deliverable-item">
-                        <h3 class="deliverable-title">Agent Infrastructure</h3>
-                    </div>
-                    <div class="deliverable-item">
-                        <h3 class="deliverable-title">AI Toolstack Orchestration</h3>
+                    <div class="step">
+                        <div class="kicker">Step 3</div>
+                        <h3>Agent Execution</h3>
+                        <p>Deploy governed agent execution paths with clear handoffs and accountability.</p>
                     </div>
                 </div>
             </div>
@@ -192,53 +203,103 @@
 
         <section>
             <div class="container">
-                <h2>Outcome</h2>
-                <ul class="outcomes-list">
-                    <li>Clarity</li>
-                    <li>Direction</li>
-                    <li>Momentum</li>
-                </ul>
+                <div class="eyebrow">Outcomes</div>
+                <h2>Clarity. Direction. Momentum.</h2>
+                <div class="outcomes">
+                    <span class="tag">Clarity</span>
+                    <span class="tag">Direction</span>
+                    <span class="tag">Momentum</span>
+                </div>
             </div>
         </section>
 
         <section id="assessment">
             <div class="container">
-                <h2>Infrastructure Assessment</h2>
-                <p class="body-text">Before building, understand your current state. This assessment reveals where infrastructure gaps block AI leverage.</p>
-                
-                <form class="assessment-form" action="https://formspree.io/f/xovonvnl" method="POST">
-                    <div class="form-group">
+                <div class="eyebrow">Infrastructure AI-Era Alignment</div>
+                <h2>Run Infrastructure Assessment</h2>
+                <p>Use this lead-gen intake to map blockers before you invest in tools that do not connect.</p>
+                <form id="lead-form" class="form-wrap" action="/api/lead" method="POST">
+                    <input type="hidden" name="brand" value="BizBuilders AI">
+                    <input type="hidden" name="widget_name" value="Infrastructure AI-Era Alignment">
+                    <input type="hidden" name="_subject" value="BizBuilders AI | Infrastructure AI-Era Alignment">
+                    <div class="field">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input id="name" name="name" required>
                     </div>
-                    <div class="form-group">
+                    <div class="field">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input id="email" name="email" type="email" required>
                     </div>
-                    <div class="form-group">
+                    <div class="field">
                         <label for="company">Company</label>
-                        <input type="text" id="company" name="company" required>
+                        <input id="company" name="company" required>
                     </div>
-                    <div class="form-group">
-                        <label for="problem">Infrastructure challenges</label>
-                        <textarea id="problem" name="problem" required></textarea>
+                    <div class="field">
+                        <label for="summary">Short problem summary</label>
+                        <textarea id="summary" name="short problem summary" required></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="timeline">Timeline</label>
-                        <input type="text" id="timeline" name="timeline" placeholder="e.g., Q2 2026" required>
+                    <div class="field">
+                        <label for="timeline">Urgency or timeline</label>
+                        <input id="timeline" name="urgency or timeline" required>
                     </div>
-                    <input type="hidden" name="_subject" value="BizBuilders Infrastructure Assessment">
-                    <input type="hidden" name="_cc" value="erik@bizbuilders.ai">
-                    <button type="submit" class="btn" style="width: 100%;">Establish Context Architecture</button>
+                    <button class="btn primary" type="submit">Run Infrastructure Assessment</button>
+                    <div id="status" class="status">Receipt confirmed. Your infrastructure assessment was submitted successfully.</div>
                 </form>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="eyebrow">Final CTA</div>
+                <h2>Establish context before you scale automation.</h2>
+                <div class="cta-group">
+                    <a class="btn primary" href="#assessment">Establish Context Architecture</a>
+                    <a class="btn" href="https://transformby10x.ai">Back to TransformBy10X</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 BizBuilders AI</p>
-        </div>
+        <div class="container">BizBuilders AI | Infrastructure intelligence powered by FLOW Agent OS</div>
     </footer>
+
+    <div class="aiva-dock">
+        <small>AIVA handles intake, qualification, and continuity across the ecosystem.</small>
+        <a class="btn primary" href="#assessment">AIVA Intake Path</a>
+    </div>
+
+    <script>
+        const form = document.getElementById("lead-form");
+        const status = document.getElementById("status");
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            const submitButton = form.querySelector("button[type='submit']");
+            const originalText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = "Submitting...";
+            status.style.display = "none";
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: { "Accept": "application/json" }
+                });
+                if (!response.ok) {
+                    throw new Error("Submit error");
+                }
+                form.reset();
+                status.textContent = "Receipt confirmed. Your infrastructure assessment was submitted successfully.";
+                status.style.display = "block";
+            } catch (error) {
+                status.textContent = "Submission did not complete. Email aiva@bizbuilders.ai with your name, company, summary, and timeline.";
+                status.style.display = "block";
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
+        });
+    </script>
 </body>
 </html>

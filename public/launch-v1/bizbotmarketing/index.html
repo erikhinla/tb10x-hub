@@ -3,256 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizBot Marketing — Marketing That Runs Without Constant Effort</title>
-    <meta name="description" content="AI agents and automation turn scattered marketing tasks into a consistent growth engine.">
+    <title>BizBot Marketing | Execution Engine</title>
+    <meta name="description" content="Marketing that runs without constant effort. AI agents and automation pipelines drive consistent execution.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --white: #FAFAFA;
-            --moss: #2F3A07;
-            --gold: #C8A96A;
-            --dark: #141414;
-            --transition: cubic-bezier(0.4, 0.0, 0.2, 1) 350ms;
+            --bg: #0f0f11;
+            --panel: #17181d;
+            --text: #f1f2f5;
+            --soft: #b7bcc6;
+            --line: #2d313d;
+            --accent: #d4ab74;
+            --radius: 12px;
+            --max: 1080px;
         }
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: var(--white);
-            color: var(--dark);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+            background: radial-gradient(1100px 620px at 88% -15%, #2a2f3c, var(--bg) 60%);
+            color: var(--text);
+            font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.66;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        header { padding: 2rem 0; border-bottom: 1px solid rgba(47, 58, 7, 0.1); }
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--moss);
-        }
-        section { padding: 8rem 0; border-top: 1px solid rgba(47, 58, 7, 0.1); }
-        section:first-of-type { border-top: none; }
-        h1, h2 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 500;
-            line-height: 1.2;
-            letter-spacing: -0.03em;
-            color: var(--moss);
-        }
-        h1 { font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 1.5rem; }
-        h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; }
-        .subtitle {
-            font-size: clamp(1.25rem, 2vw, 1.75rem);
-            font-weight: 300;
-            opacity: 0.8;
-            max-width: 40em;
-            margin-bottom: 3rem;
-        }
-        .body-text {
-            font-size: 1.125rem;
-            font-weight: 300;
-            opacity: 0.75;
-            max-width: 36em;
-            line-height: 1.8;
-        }
+        .container { max-width: var(--max); margin: 0 auto; padding: 0 1.4rem; }
+        header { border-bottom: 1px solid var(--line); background: rgba(15, 15, 17, 0.88); position: sticky; top: 0; z-index: 20; }
+        nav { min-height: 72px; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+        .logo { font-family: "Cormorant Garamond", serif; font-size: 2rem; }
+        .menu { display: flex; gap: 0.7rem; flex-wrap: wrap; }
         .btn {
-            display: inline-block;
-            padding: 1.25rem 3rem;
-            font-size: 1rem;
-            font-weight: 500;
+            border: 1px solid var(--accent);
+            color: var(--text);
             text-decoration: none;
-            border-radius: 4px;
-            transition: all var(--transition);
-            cursor: pointer;
-            background: var(--moss);
-            color: var(--white);
-            border: none;
-        }
-        .btn:hover {
-            background: #3d4b09;
-            transform: translateY(-2px);
-        }
-        .hero { min-height: 80vh; display: flex; align-items: center; }
-        .outcomes-list {
-            list-style: none;
-            margin-top: 2rem;
-        }
-        .outcomes-list li {
-            font-size: 1.25rem;
-            font-weight: 300;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(47, 58, 7, 0.1);
-        }
-        .outcomes-list li:last-child {
-            border-bottom: none;
-        }
-        .assessment-form {
-            max-width: 600px;
-            margin: 3rem 0;
-            padding: 3rem;
-            border: 1px solid rgba(47, 58, 7, 0.15);
-            border-radius: 6px;
-        }
-        .form-group { margin-bottom: 1.5rem; }
-        label {
-            display: block;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: var(--moss);
-        }
-        input, textarea, select {
-            width: 100%;
-            padding: 1rem;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            border: 1px solid rgba(47, 58, 7, 0.2);
-            border-radius: 4px;
-            transition: all var(--transition);
-        }
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: var(--moss);
-        }
-        textarea { min-height: 100px; resize: vertical; }
-        footer {
-            padding: 4rem 0;
-            border-top: 1px solid rgba(47, 58, 7, 0.1);
-            text-align: center;
-            opacity: 0.6;
-        }
-        .aiva-launcher {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 1000;
-        }
-        .aiva-btn {
-            background: var(--moss);
-            color: var(--white);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            box-shadow: 0 4px 24px rgba(47, 58, 7, 0.2);
-            font-weight: 500;
-            transition: all var(--transition);
-            display: flex;
+            border-radius: 999px;
+            min-height: 46px;
+            padding: 0.65rem 1.1rem;
+            display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
+            justify-content: center;
+            font-weight: 600;
+            background: transparent;
+            cursor: pointer;
+            transition: 0.2s ease;
         }
-        .aiva-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 32px rgba(47, 58, 7, 0.3);
+        .btn:hover { transform: translateY(-2px); }
+        .btn.primary { background: var(--accent); color: #1d1510; }
+        section { padding: 5rem 0; border-bottom: 1px solid rgba(45, 49, 61, 0.6); }
+        h1, h2, h3 { font-family: "Cormorant Garamond", serif; line-height: 1.08; }
+        h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); max-width: 14ch; }
+        h2 { font-size: clamp(1.9rem, 4.7vw, 3rem); max-width: 22ch; }
+        h3 { font-size: clamp(1.3rem, 2.8vw, 1.8rem); }
+        p { max-width: 68ch; color: var(--soft); }
+        .eyebrow { color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.76rem; margin-bottom: 1rem; }
+        .hero { min-height: 76vh; display: grid; align-items: center; }
+        .hero p { margin-top: 1.1rem; font-size: clamp(1.06rem, 2.2vw, 1.3rem); color: #d7dbe3; }
+        .cta-group { display: flex; gap: 0.75rem; margin-top: 1.8rem; flex-wrap: wrap; }
+        .grid {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.8rem;
         }
-        .pulse {
-            width: 10px;
-            height: 10px;
-            background: #4ade80;
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
+        .panel {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--panel);
+            padding: 1rem;
         }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+        .form-wrap {
+            margin-top: 2rem;
+            max-width: 760px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: #15181f;
+            padding: 1.2rem;
         }
-        @media (max-width: 768px) {
-            section { padding: 4rem 0; }
+        .field { margin-bottom: 0.9rem; }
+        label { display: block; margin-bottom: 0.45rem; font-size: 0.86rem; color: #d7dce6; }
+        input, textarea {
+            width: 100%;
+            border: 1px solid #3d4250;
+            border-radius: 8px;
+            background: #0f1117;
+            color: var(--text);
+            padding: 0.75rem 0.82rem;
+            font: inherit;
+        }
+        textarea { min-height: 125px; resize: vertical; }
+        .status { margin-top: 0.7rem; color: #9be7c6; display: none; font-size: 0.93rem; }
+        .aiva {
+            margin-top: 1.3rem;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--panel);
+            padding: 1rem;
+        }
+        .aiva-dock {
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 40;
+            display: grid;
+            gap: 0.45rem;
+            justify-items: end;
+        }
+        .aiva-dock small {
+            background: rgba(15, 15, 17, 0.96);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 0.5rem 0.65rem;
+            max-width: 290px;
+            color: #d6dce6;
+        }
+        footer { padding: 2rem 0 3rem; color: #afb6c0; font-size: 0.92rem; }
+        @media (max-width: 780px) {
+            .menu { display: none; }
+            section { padding: 3.9rem 0; }
+            .aiva-dock small { display: none; }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">BizBot Marketing</div>
+            <nav>
+                <div class="logo">BizBot Marketing</div>
+                <div class="menu">
+                    <a class="btn" href="https://transformby10x.ai">TransformBy10X</a>
+                    <a class="btn" href="https://bizbuilders.ai">BizBuilders AI</a>
+                    <a class="btn primary" href="#lead-loss">Activate Marketing Engine</a>
+                </div>
+            </nav>
         </div>
     </header>
 
     <main>
         <section class="hero">
             <div class="container">
+                <div class="eyebrow">Execution arm</div>
                 <h1>Marketing that runs without constant effort.</h1>
-                <p class="subtitle">AI agents and automation turn scattered marketing tasks into a consistent growth engine.</p>
+                <p>AI agents and automation turn scattered marketing tasks into a consistent growth engine.</p>
+                <div class="cta-group">
+                    <a class="btn primary" href="#lead-loss">Activate Marketing Engine</a>
+                    <a class="btn" href="#core-functions">See Core Functions</a>
+                </div>
             </div>
         </section>
 
         <section>
             <div class="container">
-                <h2>The Problem</h2>
-                <p class="body-text">Marketing stalls because execution breaks. Ideas exist. Systems don't.</p>
+                <div class="eyebrow">What BizBot does</div>
+                <h2>BizBot organizes, optimizes, and mobilizes marketing operations.</h2>
+                <p>Marketing stalls because execution breaks. Ideas exist. Systems do not.</p>
+            </div>
+        </section>
+
+        <section id="core-functions">
+            <div class="container">
+                <div class="eyebrow">Core functions</div>
+                <h2>Execution functions that prevent lead drift.</h2>
+                <div class="grid">
+                    <div class="panel"><h3>Consistent publishing</h3></div>
+                    <div class="panel"><h3>Lead capture</h3></div>
+                    <div class="panel"><h3>Growth loops</h3></div>
+                </div>
             </div>
         </section>
 
         <section>
             <div class="container">
-                <h2>Solution</h2>
-                <p class="body-text" style="margin-bottom: 3rem;">Organize, optimize, and mobilize marketing operations.</p>
-                
-                <h2 style="font-size: 1.5rem; margin-top: 3rem;">Outcome</h2>
-                <ul class="outcomes-list">
-                    <li>Consistent publishing</li>
-                    <li>Lead capture</li>
-                    <li>Growth loops</li>
-                </ul>
+                <div class="eyebrow">AIVA</div>
+                <h2>AIVA protects the front line.</h2>
+                <div class="aiva">
+                    <p>AIVA handles intake, qualification, continuity, follow-up, and rebooking so the front line is never the failure point.</p>
+                </div>
             </div>
         </section>
 
-        <section id="assessment">
+        <section id="lead-loss">
             <div class="container">
-                <h2>Lead Loss Assessment</h2>
-                <p class="body-text">This assessment reveals where revenue is slipping through the cracks in your marketing execution.</p>
-                
-                <form class="assessment-form" action="https://formspree.io/f/xovonvnl" method="POST">
-                    <div class="form-group">
+                <div class="eyebrow">Lead Loss Assessment</div>
+                <h2>Bottom-Line Leaking From Lead Loss?</h2>
+                <p>Run this assessment to identify where response flow, follow-up flow, and conversion continuity are failing.</p>
+                <form id="lead-form" class="form-wrap" action="/api/lead" method="POST">
+                    <input type="hidden" name="brand" value="BizBot Marketing">
+                    <input type="hidden" name="widget_name" value="Lead Loss Assessment">
+                    <input type="hidden" name="_subject" value="BizBot Marketing | Lead Loss Assessment">
+                    <div class="field">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input id="name" name="name" required>
                     </div>
-                    <div class="form-group">
+                    <div class="field">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input id="email" name="email" type="email" required>
                     </div>
-                    <div class="form-group">
+                    <div class="field">
                         <label for="company">Company</label>
-                        <input type="text" id="company" name="company" required>
+                        <input id="company" name="company" required>
                     </div>
-                    <div class="form-group">
-                        <label for="monthly_leads">Monthly leads/inquiries</label>
-                        <select id="monthly_leads" name="monthly_leads" required>
-                            <option value="">Select range...</option>
-                            <option value="<10">Less than 10</option>
-                            <option value="10-50">10-50</option>
-                            <option value="50-200">50-200</option>
-                            <option value="200+">200+</option>
-                        </select>
+                    <div class="field">
+                        <label for="summary">Short problem summary</label>
+                        <textarea id="summary" name="short problem summary" required></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="problem">Where is lead loss happening?</label>
-                        <textarea id="problem" name="problem" placeholder="e.g., slow response, no follow-up, missed calls" required></textarea>
+                    <div class="field">
+                        <label for="timeline">Urgency or timeline</label>
+                        <input id="timeline" name="urgency or timeline" required>
                     </div>
-                    <div class="form-group">
-                        <label for="timeline">Timeline</label>
-                        <input type="text" id="timeline" name="timeline" placeholder="e.g., This month" required>
-                    </div>
-                    <input type="hidden" name="_subject" value="BizBot Lead Loss Assessment">
-                    <input type="hidden" name="_cc" value="erik@bizbuilders.ai">
-                    <button type="submit" class="btn" style="width: 100%;">Activate Marketing Engine</button>
+                    <button class="btn primary" type="submit">Activate Marketing Engine</button>
+                    <div id="status" class="status">Receipt confirmed. Your lead loss assessment is now in queue.</div>
                 </form>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="eyebrow">Final CTA</div>
+                <h2>Turn scattered marketing into governed execution.</h2>
+                <div class="cta-group">
+                    <a class="btn primary" href="#lead-loss">Activate Marketing Engine</a>
+                    <a class="btn" href="https://transformby10x.ai">See TransformBy10X</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 BizBot Marketing</p>
-        </div>
+        <div class="container">BizBot Marketing | AI agent execution with AIVA continuity</div>
     </footer>
 
-    <div class="aiva-launcher">
-        <a href="https://aiva-app-eta.vercel.app" target="_blank" class="btn aiva-btn">
-            <span class="pulse"></span>
-            Talk to AIVA
-        </a>
+    <div class="aiva-dock">
+        <small>AIVA handles intake, qualification, and continuity.</small>
+        <a class="btn primary" href="#lead-loss">AIVA Intake Path</a>
     </div>
+
+    <script>
+        const form = document.getElementById("lead-form");
+        const status = document.getElementById("status");
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            const submitButton = form.querySelector("button[type='submit']");
+            const originalText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = "Submitting...";
+            status.style.display = "none";
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: { "Accept": "application/json" }
+                });
+                if (!response.ok) {
+                    throw new Error("Submit error");
+                }
+                form.reset();
+                status.textContent = "Receipt confirmed. Your lead loss assessment is now in queue.";
+                status.style.display = "block";
+            } catch (error) {
+                status.textContent = "Submission did not complete. Email aiva@bizbotmarketing.ai with your name, company, summary, and timeline.";
+                status.style.display = "block";
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
+        });
+    </script>
 </body>
 </html>
