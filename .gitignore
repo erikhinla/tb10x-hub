@@ -2,3 +2,12 @@
 node_modules/
 *.log
 _archives/
+tbtx-web-dark-alt/
+AIR_DEPLOYMENT_INSTRUCTIONS.md
+DEPLOYMENT_READY.md
+DEPLOY_NOW.sh
+assets/social-banners/
+assets/t10x-customer-journey-cream.html
+assets/~$SOCIAL_ASSET_MASTER.xlsx
+public/tb10x-hub/.gitignore
+aiva-app/.vercel/
