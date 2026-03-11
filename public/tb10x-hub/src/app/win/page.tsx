@@ -1,0 +1,1 @@
+export default function WinPage(){return <div style={{background:"#000",color:"#0f0",height:"100vh",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"60px"}}>✅ YOU ARE ON THE WIN PAGE</div>;}

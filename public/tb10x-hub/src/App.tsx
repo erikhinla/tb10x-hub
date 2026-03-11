@@ -8,6 +8,7 @@ import WinPage from "./pages/WinPage";
 import FlowAgentPage from "./pages/FlowAgentPage";
 import BizBotMarketingPage from "./pages/BizBotMarketingPage";
 import BizBuildersAIPage from "./pages/BizBuildersAIPage";
+import DrDroolPage from "./pages/DrDroolPage";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
       <Route path="/flow-agent" element={<FlowAgentPage />} />
       <Route path="/bizbot-marketing" element={<BizBotMarketingPage />} />
       <Route path="/bizbuilders-ai" element={<BizBuildersAIPage />} />
+      <Route path="/dr-drool" element={<DrDroolPage />} />
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

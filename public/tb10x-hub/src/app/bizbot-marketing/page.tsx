@@ -1,0 +1,1 @@
+export default function BizBotPage(){return <div style={{background:"#000",color:"#0ff",height:"100vh",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"60px"}}>✅ YOU ARE ON BIZBOT MARKETING</div>;}

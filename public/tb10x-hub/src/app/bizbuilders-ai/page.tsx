@@ -1,0 +1,1 @@
+export default function BizBuildersPage(){return <div style={{background:"#000",color:"#f0f",height:"100vh",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"60px"}}>✅ YOU ARE ON BIZBUILDERS AI</div>;}
