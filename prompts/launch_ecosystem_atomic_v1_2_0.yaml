@@ -58,9 +58,9 @@ brand_architecture:
       role: "Execution method that turns doctrine into running systems"
     flow_agent_os:
       name: "FLOW Agent OS"
-      role: "TB10X execution runtime and Agent OS"
+      role: "TB10X execution coordination runtime and Agent Orchestration System"
       description: >
-        Production-grade multi-agent operating system that implements W.I.N. and F.L.O.W.:
+        Production-grade multi-agent orchestration system that implements W.I.N. and F.L.O.W.:
         three agents, risk-tier routing, filesystem task queues, and governed execution boundaries.
   persistent_agent:
     name: "AIVA"
@@ -100,7 +100,7 @@ site_map:
       - "Problem: Digital fatigue"
       - "Philosophy: TransformBy10X worldview"
       - "Doctrine: W.I.N."
-      - "Architecture + Agent OS: F.L.O.W. + FLOW Agent OS"
+      - "Architecture + Orchestration System: F.L.O.W. + FLOW Agent OS"
       - "Arms: BizBuilders AI (infrastructure), BizBot Marketing (execution)"
       - "Entry point: Context Clarity Diagnostic"
     required_sections:
@@ -134,7 +134,7 @@ site_map:
       body: "TransformBy10X is a system for restoring clarity and building AI-native operations."
       layers:
         - "Context (worldview and doctrine)"
-        - "Infrastructure (BizBuilders AI + FLOW Agent OS)"
+        - "Infrastructure (BizBuilders AI + FLOW Agent OS orchestration layer)"
         - "Execution (BizBot Marketing + AIVA)"
     system_section:
       visual_type: "Vertical stack diagram, not cards, no SaaS grid"
@@ -181,7 +181,7 @@ site_map:
         - "SaaS feature tiles"
   bizbuilders_ai:
     domain: "bizbuilders.ai"
-    purpose: "Infrastructure intelligence and FLOW Agent OS landing page"
+    purpose: "Infrastructure intelligence and FLOW Agent OS orchestration-layer page"
     required_sections:
       - "Hero"
       - "Problem framing"
@@ -204,10 +204,10 @@ site_map:
         - "Agent Infrastructure"
         - "AI Toolstack Orchestration"
     flow_agent_os_block:
-      headline: "FLOW Agent OS: The TB10X execution runtime."
+      headline: "FLOW Agent OS: The TB10X Agent Orchestration System."
       body: >
         FLOW Agent OS implements W.I.N. and F.L.O.W. in production: three agents, risk-tier routing,
-        filesystem task queues, and governed execution boundaries. This is the Agent OS that sits
+        filesystem task queues, and governed execution boundaries. This is the orchestration layer that sits
         underneath BizBuilders deployments.
     outcomes:
       bullets:
@@ -359,7 +359,7 @@ validation:
     - "bizbuilders.ai is live"
     - "bizbotmarketing.ai is live"
     - "Each site has a working lead-gen capture path"
-    - "W.I.N. and F.L.O.W. Agent OS are clearly articulated in public messaging"
+    - "W.I.N. and FLOW Agent OS (Agent Orchestration System) are clearly articulated in public messaging"
     - "BizBuilders AI and BizBot Marketing clearly roll up under TransformBy10X"
     - "Prompt & Circumstance has finalized launch assets and copy"
     - "The Passenger Doesn't Speak has finalized launch assets and copy"

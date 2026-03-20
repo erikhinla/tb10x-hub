@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#0a1113"/>
-  <path d="M0 620 L1280 340" stroke="#1f3a31" stroke-width="2"/>
-  <path d="M0 540 L1280 260" stroke="#1f3a31" stroke-width="2"/>
-  <text x="80" y="320" fill="#2be59a" font-size="86" font-family="Georgia, serif">Prompt &amp; Circumstance</text>
-  <text x="85" y="390" fill="#cdf7e2" font-size="34" font-family="Arial, sans-serif">Dispatches on context, systems, and human-AI interaction.</text>
-</svg>

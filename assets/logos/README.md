@@ -48,7 +48,7 @@
 - **Use:** Website header, primary brand identity
 - **Action needed:** Erik to provide or confirm location
 
-### FLOW (Agent OS)
+### FLOW (Agent Orchestration System)
 - **Status:** Pending
 - **Use:** FLOW documentation, technical pages, system architecture
 
@@ -83,7 +83,7 @@
 - BBM = BizBot Marketing (BizBot Mrktng™)
 - WIN = Workstream Intellect Nexus
 - OS = One-Shot Mode
-- FLOW = FLOW Agent OS
+- FLOW = FLOW Agent OS (Agent Orchestration System)
 
 ---
 

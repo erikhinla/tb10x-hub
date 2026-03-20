@@ -10,7 +10,7 @@ TB10X is the umbrella. Not a company — a movement.
 ~/PROJECTS/TRANSFORM_BY_10X/
 ├── public/              # Deployable sites (Git-tracked, Vercel-deployed)
 │   ├── tb10x-hub/      # Main TB10X site (7-page structure)
-│   ├── flow-os-landing/     # FLOW Agent OS product page
+│   ├── flow-os-landing/     # FLOW Agent OS orchestration-layer references
 │   └── bizbot-intake/       # BizBot lead capture form
 ├── content/            # Blog posts, articles, social media
 ├── assets/             # Logos, images, brand files
@@ -48,7 +48,7 @@ git push origin main
 
 **FLOW = Frictionless Leverage Orchestrated Workflows**  
 **W.I.N. = Workstream Intellect Nexus™**  
-**FLOW Agent OS = The TB10X execution runtime**
+**FLOW Agent OS = The TB10X Agent Orchestration System (execution coordination runtime)**
 
 ---
 

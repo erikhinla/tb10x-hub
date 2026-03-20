@@ -1,0 +1,10 @@
+{
+  "name": "tbtx-site",
+  "version": "1.0.0",
+  "description": "Static site for TransformBy10X.ai",
+  "main": "index.html",
+  "dependencies": {
+    "stripe": "^14.20.0",
+    "resend": "^3.2.0"
+  }
+}

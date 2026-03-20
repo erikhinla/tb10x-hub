@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizBuilders.ai - Context Architecture</title>
+    <meta name="description" content="Stop managing tools. Start building architecture. We build the operational infrastructure that turns chaos into clarity.">
+    <!-- Clean sans-serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <div class="logo">BizBuilders AI</div>
+            <div class="nav-links">
+                <a href="#framework">Framework</a>
+                <a href="#process">Process</a>
+                <a href="#results">Results</a>
+                <a href="#audit">Audit</a>
+            </div>
+            <button onclick="scrollToAudit()" class="btn btn-primary nav-btn" data-utm="?utm_source=bbai&utm_medium=nav&utm_campaign=infra_audit">Request Your Audit</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-video-wrapper">
+            <div class="hero-video-mask"></div>
+            <!-- Ambient Golden Architectural Video would go here -->
+        </div>
+        <div class="hero-content">
+            <h1>Stop managing tools. Start building architecture.</h1>
+            <p>Your team doesn't need another platform. They need a system that connects the ones you already have. We build the operational infrastructure that turns chaos into clarity.</p>
+            <div class="hero-ctas">
+                <button onclick="scrollToAudit()" class="btn btn-primary btn-large" data-utm="?utm_source=bbai&utm_medium=hero&utm_campaign=infra_audit">Get Your Infrastructure Audit</button>
+                <a href="#process" class="btn btn-ghost" data-utm="?utm_source=bbai&utm_medium=hero">See How It Works</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="reality" class="section reality-section">
+        <div class="section-container">
+            <div class="reality-grid">
+                <div class="reality-text">
+                    <span class="section-label">THE REALITY</span>
+                    <h2>40+ tools. Zero architecture.</h2>
+                    <p>The average mid-market company runs 40+ disconnected systems. Every new tool adds complexity without adding clarity. Your team spends more time managing the stack than doing the work. The result: stalled momentum, trapped knowledge, and decisions made on gut feeling instead of data.</p>
+                </div>
+                <div class="reality-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">40+</span>
+                        <span class="stat-desc">Disconnected Tools</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">73%</span>
+                        <span class="stat-desc">Time Wasted on Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="framework" class="section framework-section">
+        <div class="section-container">
+            <span class="section-label text-center">THE FRAMEWORK</span>
+            <h2 class="text-center mx-auto max-w-2xl">Context Architecture: infrastructure that thinks.</h2>
+            
+            <div class="process-timeline" id="process">
+                <div class="timeline-step">
+                    <div class="step-num"><span>1</span></div>
+                    <h3>Audit</h3>
+                    <p>We map your entire operational landscape. Tools, workflows, dependencies, gaps. Nothing hidden.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-num"><span>2</span></div>
+                    <h3>Architect</h3>
+                    <p>We design the connection layer. What talks to what. What triggers what. Where intelligence lives.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-num"><span>3</span></div>
+                    <h3>Implement</h3>
+                    <p>We build it. Not a prototype. Not a deck. A working system your team uses on day one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="section results-section">
+        <div class="section-container text-center">
+            <span class="section-label">THE RESULTS</span>
+            <h2>What architecture actually looks like.</h2>
+            
+            <div class="results-comparison">
+                <div class="comparison-card before">
+                    <h4 class="text-brown">Before</h4>
+                    <ul>
+                        <li>43 disconnected tools</li>
+                        <li>6 manual handoffs per project</li>
+                        <li>12-hour reporting cycles</li>
+                    </ul>
+                </div>
+                <div class="comparison-card after">
+                    <h4 class="text-gold">After</h4>
+                    <ul>
+                        <li>Unified operational workspace</li>
+                        <li>Automated logic routing</li>
+                        <li>Real-time visibility metrics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button onclick="scrollToAudit()" class="btn btn-primary mt-4" data-utm="?utm_source=bbai&utm_medium=results&utm_campaign=infra_audit">See What This Looks Like For You</button>
+        </div>
+    </section>
+
+    <section id="audit" class="section audit-section">
+        <div class="section-container">
+            <div class="audit-header text-center">
+                <span class="section-label">START HERE</span>
+                <h2>Your Infrastructure Audit</h2>
+                <p class="section-subhead max-w-2xl mx-auto">Five minutes of honest answers. We will tell you exactly where the leaks are, no charge for the diagnosis.</p>
+            </div>
+
+            <div class="audit-form-container">
+                <form id="auditForm" class="audit-form" data-netlify="true" name="audit" method="POST">
+                    <!-- Progress Bar -->
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+
+                    <!-- Step 1 -->
+                    <div class="form-step active" id="step1">
+                        <h3>Basics</h3>
+                        <div class="input-group">
+                            <label for="companyName">Company Name</label>
+                            <input type="text" id="companyName" name="companyName" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="roleTitle">Your Role / Title</label>
+                            <input type="text" id="roleTitle" name="roleTitle" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-full next-step">Continue</button>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="form-step" id="step2">
+                        <h3>The Landscape</h3>
+                        <div class="input-group">
+                            <label for="teamSize">Team Size</label>
+                            <select id="teamSize" name="teamSize" required>
+                                <option value="">Select size...</option>
+                                <option value="1-5">1-5 Employees</option>
+                                <option value="6-15">6-15 Employees</option>
+                                <option value="16-50">16-50 Employees</option>
+                                <option value="50+">50+ Employees</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="toolCount">How many tools does your team use daily?</label>
+                            <select id="toolCount" name="toolCount" required>
+                                <option value="">Select range...</option>
+                                <option value="1-10">1-10 Tools</option>
+                                <option value="11-25">11-25 Tools</option>
+                                <option value="26-40">26-40 Tools</option>
+                                <option value="40+">40+ Tools</option>
+                            </select>
+                        </div>
+                        <div class="form-controls">
+                            <button type="button" class="btn btn-ghost prev-step">Back</button>
+                            <button type="button" class="btn btn-primary next-step">Continue</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="form-step" id="step3">
+                        <h3>The Target</h3>
+                        <div class="input-group">
+                            <label for="bottleneck">What is your biggest operational bottleneck?</label>
+                            <textarea id="bottleneck" name="bottleneck" rows="3" required placeholder="E.g., We lose leads because sales and marketing systems don't sync..."></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label for="revenue">Annual Revenue Range</label>
+                            <select id="revenue" name="revenue" required>
+                                <option value="">Select range...</option>
+                                <option value="Under $500K">Under $500K</option>
+                                <option value="$500K-$2M">$500K-$2M</option>
+                                <option value="$2M-$10M">$2M-$10M</option>
+                                <option value="$10M+">$10M+</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="timeline">How soon do you need this solved?</label>
+                            <select id="timeline" name="timeline" required>
+                                <option value="">Select timeline...</option>
+                                <option value="This month">This month</option>
+                                <option value="This quarter">This quarter</option>
+                                <option value="Exploring options">Just exploring options</option>
+                            </select>
+                        </div>
+                        <div class="form-controls">
+                            <button type="button" class="btn btn-ghost prev-step">Back</button>
+                            <button type="submit" class="btn btn-primary">Submit Your Audit</button>
+                        </div>
+                    </div>
+
+                    <!-- Success State -->
+                    <div class="form-step" id="stepSuccess">
+                        <div class="success-message text-center">
+                            <div class="success-icon">✓</div>
+                            <h3>Audit Received</h3>
+                            <p>We have your audit. Expect a response within 48 hours with your operational landscape map.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">BizBuilders AI</div>
+                <p>&copy; 2026 BizBuilders AI. All rights reserved.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-col">
+                    <a href="https://transformby10x.ai" target="_blank">TransformBy10X.ai</a>
+                    <a href="https://bizbotmarketing.ai" target="_blank">BizBotMarketing.ai</a>
+                </div>
+                <div class="footer-col">
+                    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="footer-cta">
+                <button onclick="scrollToAudit()" class="text-link">Ready to Build? &rarr;</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

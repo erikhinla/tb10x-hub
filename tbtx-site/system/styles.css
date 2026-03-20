@@ -1,0 +1,396 @@
+:root {
+  --bg: #F8F8F6;
+  --text: #0B0B0B;
+  --muted: #6F6F6F;
+  --line: #E6E6E2;
+  --accent: #00FFB4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono-label, .logo, .phase, .price {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Scroll Rail */
+.scroll-rail {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--line);
+  z-index: 100;
+}
+
+.scroll-fill {
+  width: 100%;
+  height: 0%;
+  background-color: var(--text);
+}
+
+/* Typography styles */
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Layout */
+.top-bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: rgba(248, 248, 246, 0.95);
+  border-bottom: 1px solid var(--line);
+  z-index: 50;
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.nav-right {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.nav-right a {
+  color: var(--muted);
+  transition: color 180ms ease-out;
+}
+
+.nav-right a:hover {
+  color: var(--text);
+}
+
+.start-link {
+  color: var(--text) !important;
+  font-weight: 500;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.hero-points {
+  margin-bottom: 3rem;
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+.cta-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--accent);
+  color: var(--text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 180ms ease-out;
+  box-shadow: 0 4px 12px rgba(11, 11, 11, 0.06);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(11, 11, 11, 0.06);
+}
+
+.btn-secondary {
+  color: var(--muted);
+  font-weight: 500;
+  transition: color 180ms ease-out;
+}
+
+.btn-secondary:hover {
+  color: var(--text);
+}
+
+.hero-panel {
+  background-color: #fff;
+  border: 1px solid var(--line);
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(11, 11, 11, 0.03);
+}
+
+.panel-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.panel-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.panel-items li {
+  padding-left: 0;
+  font-size: 0.875rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.panel-items li::before {
+  display: none;
+}
+
+.panel-items .mono-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  width: 40px;
+}
+
+/* How Section */
+.how {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  border: 1px solid var(--line);
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.phase {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.price {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.card-bullets {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* Offer Section */
+.offer {
+  text-align: center;
+}
+
+.route-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.route-card {
+  border: 1px solid var(--line);
+  padding: 3rem 2rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.route-target {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.route-solution {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.note-line {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* Routing Section */
+.routing {
+  border-top: 1px solid var(--line);
+}
+
+.routing-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.125rem;
+}
+
+.routing-row span:first-child {
+  color: var(--muted);
+}
+
+.routing-row span:last-child {
+  font-weight: 500;
+}
+
+/* Final CTA */
+.final-cta {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.sub {
+  color: var(--muted);
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.footer-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.copy-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: all 180ms ease-out;
+}
+
+.copy-btn:hover {
+  background-color: var(--line);
+}
+
+/* Motion Rules */
+.reveal {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 280ms ease-out, transform 280ms ease-out;
+}
+
+.reveal.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .how {
+    grid-template-columns: 1fr;
+  }
+  .route-cards {
+    grid-template-columns: 1fr;
+  }
+  .routing-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .nav-right {
+    display: none;
+  }
+}

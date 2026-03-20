@@ -50,23 +50,27 @@ document.addEventListener('DOMContentLoaded', () => {
   if (revanewForm) {
     revanewForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      const email = document.getElementById('revanew-email').value;
       const youtubeUrl = document.getElementById('youtube-url').value;
 
-      if (youtubeUrl) {
-        // Show success message
+      if (email && youtubeUrl) {
         const button = revanewForm.querySelector('button');
         const originalText = button.textContent;
-        button.textContent = '✓ Analyzing...';
+
+        // Store data (for backend integration later)
+        const formData = { email, youtubeUrl, timestamp: new Date().toISOString() };
+        localStorage.setItem('revanew_submission', JSON.stringify(formData));
+
+        // Show success message
+        button.textContent = '✓ Analyzing your video...';
         button.style.opacity = '0.6';
 
-        // Simulate processing, then show success
         setTimeout(() => {
-          button.textContent = '✓ Check your email for your analysis!';
+          button.textContent = '✓ Check your email for the full analysis!';
           button.style.backgroundColor = 'rgba(148, 163, 184, 0.2)';
           button.style.cursor = 'default';
           button.disabled = true;
 
-          // Reset after 4 seconds
           setTimeout(() => {
             button.textContent = originalText;
             button.style.opacity = '1';
@@ -74,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
             button.style.cursor = 'pointer';
             button.disabled = false;
             revanewForm.reset();
-          }, 4000);
-        }, 800);
+          }, 5000);
+        }, 1000);
       }
     });
   }

@@ -50,7 +50,7 @@ A doctrine based on three principles:
 • Risk-first architecture
 • Atomic execution
 
-FLOW Agent OS encodes that doctrine into runtime. Every task is risk-routed. Irreversible work requires diff + approval. Build mode is atomic. No retry loops. Production cannot drift.
+FLOW Agent OS (Agent Orchestration System) encodes that doctrine into runtime. Every task is risk-routed. Irreversible work requires diff + approval. Build mode is atomic. No retry loops. Production cannot drift.
 
 From that foundation came:
 • BizBuilders AI — infrastructure implementation (we build the system)
@@ -107,7 +107,7 @@ A doctrine based on three principles:
 2. Risk-first architecture
 3. Atomic execution
 
-FLOW Agent OS now encodes that doctrine into runtime.
+FLOW Agent OS (Agent Orchestration System) now encodes that doctrine into runtime.
 
 Every task is risk-routed.
 Irreversible work requires diff + approval.
@@ -136,7 +136,7 @@ If you're serious about building AI into production systems, this is the convers
 ```
 Founder of TransformBy10X
 Architect of the W.I.N. System (Workstream Intellect Nexus)
-Creator of FLOW Agent OS
+Creator of FLOW Agent OS (Agent Orchestration System)
 
 I build sovereign AI systems that scale without chaos.
 

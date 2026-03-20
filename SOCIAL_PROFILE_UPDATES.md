@@ -301,7 +301,7 @@ I redesign workflows for the AI era — then prove they work by shipping real ou
 
 🔧 **Workflow Redesign** — How to collapse coordination layers and delegate repetitive work to AI agents
 
-🎯 **TransformBy10X Framework** — The operating system behind everything I build
+🎯 **TransformBy10X Framework** — The orchestration architecture behind everything I build
 
 🎙️ **The Passenger Doesn't Speak** — Behind-the-scenes of producing a psychological audio thriller using AI-led workflows (proof-of-system)
 
