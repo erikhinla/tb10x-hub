@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BizBotMarketing.ai | Productize Your Content</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="logo">
+      BizBotMarketing<span class="dot">.</span>ai
+    </a>
+    <div class="nav-links">
+      <a href="#video-revanew" class="nav-link">Flagship Rev-Anew</a>
+      <a href="#loss-calculator" class="nav-link">Lead Loss Calculator</a>
+      <a href="#reddit-growth" class="nav-link">Reddit Growth</a>
+    </div>
+    <a href="#video-revanew" class="cta-primary">
+      <span class="cta-text">Productize Your Content</span>
+    </a>
+  </nav>
+
+  <!-- Hero Section (Asymmetrical layout based on Taste Skill Variance 8) -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Turn what you already made into<br> <span class="accent-text">what pays you next.</span></h1>
+      <p class="hero-sub">You are sitting on content that could be products. Video Rev-Anew analyzes any YouTube video and exports a full productization plan. Audience, pricing, market fit, distribution. In minutes.</p>
+      
+      <div class="hero-actions">
+        <a href="#video-revanew" class="cta-liquid">
+          <span class="cta-text">Start The Engine</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="abstract-shape"></div>
+    </div>
+  </header>
+
+  <!-- Flagship Video Rev-Anew Section -->
+  <section id="video-revanew" class="section-split">
+    <div class="split-left">
+      <span class="section-label">01 / Flagship Rev-Anew</span>
+      <h2 class="section-title">One Video. Dozens of Assets.</h2>
+      <p class="section-desc">We take your flagship YouTube video and atomize it across platforms. Drop a link below and see the math of content multiplication.</p>
+    </div>
+    <div class="split-right interactive-zone">
+      <form class="revanew-form" onsubmit="event.preventDefault()">
+        <input type="url" id="youtube-url" placeholder="https://youtube.com/watch?v=..." class="taste-input" required>
+        <button type="submit" class="cta-secondary">Atomize Content</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Lead Loss Calculator Section -->
+  <section id="loss-calculator" class="section-focus">
+    <div class="focus-header">
+      <span class="section-label align-center">02 / The Cost of Inaction</span>
+      <h2 class="section-title align-center">Lead Loss Calculator</h2>
+    </div>
+    <div class="calculator-bento">
+      <div class="calc-inputs">
+        <div class="input-group">
+          <label for="monthly-visitors">Monthly Site Visitors</label>
+          <input type="number" id="monthly-visitors" class="taste-input" value="1000">
+        </div>
+        <div class="input-group">
+          <label for="conversion-rate">Current Conversion Rate (%)</label>
+          <input type="number" id="conversion-rate" class="taste-input" value="1">
+        </div>
+        <div class="input-group">
+          <label for="customer-value">Lifetime Customer Value ($)</label>
+          <input type="number" id="customer-value" class="taste-input" value="500">
+        </div>
+      </div>
+      <div class="calc-results">
+        <div class="result-card">
+          <h3 class="result-label">Lost Revenue (Monthly)</h3>
+          <div class="result-value" id="lost-revenue">$24,600</div>
+          <div class="result-context">What you're leaving on the table.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reddit Growth Products (Pricing) Section -->
+  <section id="reddit-growth" class="section-grid">
+    <div class="grid-header">
+      <span class="section-label">03 / The Engine</span>
+      <h2 class="section-title">Reddit Growth Products</h2>
+      <p class="section-desc">Targeted, organic disruption in high-intent communities.</p>
+    </div>
+    
+    <div class="pricing-masonry">
+      <div class="taste-card">
+        <div class="card-tier">Reddit AIR</div>
+        <div class="card-price">$499<span class="period">/mo</span></div>
+        <ul class="card-features">
+          <li>Automated Intent Routing</li>
+          <li>Subreddit Monitoring</li>
+          <li>Daily Alert Digest</li>
+        </ul>
+        <a href="thank-you/reddit-air/" class="cta-card">Deploy AIR</a>
+      </div>
+      
+      <div class="taste-card card-featured">
+        <div class="card-badge">Most Popular</div>
+        <div class="card-tier">Reddit Bundle</div>
+        <div class="card-price">$1,499<span class="period">/mo</span></div>
+        <ul class="card-features">
+          <li>Everything in AIR</li>
+          <li>10x Human-written posts</li>
+          <li>Karma Cultivation</li>
+          <li>Dedicated Account Strategist</li>
+        </ul>
+        <a href="thank-you/reddit-bundle/" class="cta-card featured-btn">Get The Bundle</a>
+      </div>
+      
+      <div class="taste-card">
+        <div class="card-tier">Karma Package</div>
+        <div class="card-price">$299<span class="period">/mo</span></div>
+        <ul class="card-features">
+          <li>Account Aging</li>
+          <li>Organic Karma Farming</li>
+          <li>Niche Commenting Strategy</li>
+        </ul>
+        <a href="thank-you/reddit-karma/" class="cta-card">Start Cultivating</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-minimal">
+    <div class="footer-content">
+      <div class="logo">BizBotMarketing<span class="dot">.</span>ai</div>
+      <p>&copy; 2026 Transform by 10X. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
